@@ -1,5 +1,5 @@
-2021-05-16 15:59:25.241 INFO  com.xuwen.wiki.WikiApplication                    :55   [32m                  [0;39m Starting WikiApplication using Java 1.8.0_212 on wen2015mbp.lan with PID 31590 (/Users/xuwen/Desktop/wiki-springboot-vue3/target/classes started by xuwen in /Users/xuwen/Desktop/wiki-springboot-vue3)
-2021-05-16 15:59:25.244 INFO  com.xuwen.wiki.WikiApplication                    :660  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2021-05-16 15:59:25.241 INFO  com.xuwen.wiki.config.WikiApplication                    :55   [32m                  [0;39m Starting WikiApplication using Java 1.8.0_212 on wen2015mbp.lan with PID 31590 (/Users/xuwen/Desktop/wiki-springboot-vue3/target/classes started by xuwen in /Users/xuwen/Desktop/wiki-springboot-vue3)
+2021-05-16 15:59:25.244 INFO  com.xuwen.wiki.config.WikiApplication                    :660  [32m                  [0;39m No active profile set, falling back to default profiles: default
 2021-05-16 15:59:25.874 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8080 (http)
 2021-05-16 15:59:25.880 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8080"]
 2021-05-16 15:59:25.881 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
@@ -9,15 +9,15 @@
 2021-05-16 15:59:26.058 INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor  :181  [32m                  [0;39m Initializing ExecutorService 'applicationTaskExecutor'
 2021-05-16 15:59:26.177 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8080"]
 2021-05-16 15:59:26.205 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8080 (http) with context path ''
-2021-05-16 15:59:26.216 INFO  com.xuwen.wiki.WikiApplication                    :61   [32m                  [0;39m Started WikiApplication in 1.322 seconds (JVM running for 1.788)
-2021-05-16 15:59:26.218 INFO  com.xuwen.wiki.WikiApplication                    :20   [32m                  [0;39m 启动成功！！！
-2021-05-16 15:59:26.219 INFO  com.xuwen.wiki.WikiApplication                    :21   [32m                  [0;39m 地址：	http://127.0.0.1:8080
+2021-05-16 15:59:26.216 INFO  com.xuwen.wiki.config.WikiApplication                    :61   [32m                  [0;39m Started WikiApplication in 1.322 seconds (JVM running for 1.788)
+2021-05-16 15:59:26.218 INFO  com.xuwen.wiki.config.WikiApplication                    :20   [32m                  [0;39m 启动成功！！！
+2021-05-16 15:59:26.219 INFO  com.xuwen.wiki.config.WikiApplication                    :21   [32m                  [0;39m 地址：	http://127.0.0.1:8080
 2021-05-16 15:59:48.727 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
 2021-05-16 15:59:48.728 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
 2021-05-16 15:59:48.729 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 1 ms
 2021-05-16 16:00:18.410 INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor  :218  [32m                  [0;39m Shutting down ExecutorService 'applicationTaskExecutor'
-2021-05-16 16:15:02.559 INFO  com.xuwen.wiki.WikiApplication                    :55   [32m                  [0;39m Starting WikiApplication using Java 1.8.0_212 on wen2015mbp.lan with PID 31932 (/Users/xuwen/Desktop/wiki-springboot-vue3/target/classes started by xuwen in /Users/xuwen/Desktop/wiki-springboot-vue3)
-2021-05-16 16:15:02.562 INFO  com.xuwen.wiki.WikiApplication                    :660  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2021-05-16 16:15:02.559 INFO  com.xuwen.wiki.config.WikiApplication                    :55   [32m                  [0;39m Starting WikiApplication using Java 1.8.0_212 on wen2015mbp.lan with PID 31932 (/Users/xuwen/Desktop/wiki-springboot-vue3/target/classes started by xuwen in /Users/xuwen/Desktop/wiki-springboot-vue3)
+2021-05-16 16:15:02.562 INFO  com.xuwen.wiki.config.WikiApplication                    :660  [32m                  [0;39m No active profile set, falling back to default profiles: default
 2021-05-16 16:15:02.597 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
 2021-05-16 16:15:02.598 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
 2021-05-16 16:15:03.281 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8880 (http)
@@ -30,12 +30,12 @@
 2021-05-16 16:15:03.598 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
 2021-05-16 16:15:03.611 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8880"]
 2021-05-16 16:15:03.638 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8880 (http) with context path ''
-2021-05-16 16:15:03.650 INFO  com.xuwen.wiki.WikiApplication                    :61   [32m                  [0;39m Started WikiApplication in 1.431 seconds (JVM running for 1.905)
-2021-05-16 16:15:03.653 INFO  com.xuwen.wiki.WikiApplication                    :20   [32m                  [0;39m 启动成功！！！success
-2021-05-16 16:15:03.653 INFO  com.xuwen.wiki.WikiApplication                    :21   [32m                  [0;39m 地址：	http://127.0.0.1:8880
+2021-05-16 16:15:03.650 INFO  com.xuwen.wiki.config.WikiApplication                    :61   [32m                  [0;39m Started WikiApplication in 1.431 seconds (JVM running for 1.905)
+2021-05-16 16:15:03.653 INFO  com.xuwen.wiki.config.WikiApplication                    :20   [32m                  [0;39m 启动成功！！！success
+2021-05-16 16:15:03.653 INFO  com.xuwen.wiki.config.WikiApplication                    :21   [32m                  [0;39m 地址：	http://127.0.0.1:8880
 2021-05-16 16:15:17.691 INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor  :218  [32m                  [0;39m Shutting down ExecutorService 'applicationTaskExecutor'
-2021-05-16 16:15:17.780 INFO  com.xuwen.wiki.WikiApplication                    :55   [32m                  [0;39m Starting WikiApplication using Java 1.8.0_212 on wen2015mbp.lan with PID 31932 (/Users/xuwen/Desktop/wiki-springboot-vue3/target/classes started by xuwen in /Users/xuwen/Desktop/wiki-springboot-vue3)
-2021-05-16 16:15:17.780 INFO  com.xuwen.wiki.WikiApplication                    :660  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2021-05-16 16:15:17.780 INFO  com.xuwen.wiki.config.WikiApplication                    :55   [32m                  [0;39m Starting WikiApplication using Java 1.8.0_212 on wen2015mbp.lan with PID 31932 (/Users/xuwen/Desktop/wiki-springboot-vue3/target/classes started by xuwen in /Users/xuwen/Desktop/wiki-springboot-vue3)
+2021-05-16 16:15:17.780 INFO  com.xuwen.wiki.config.WikiApplication                    :660  [32m                  [0;39m No active profile set, falling back to default profiles: default
 2021-05-16 16:15:17.906 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8880 (http)
 2021-05-16 16:15:17.907 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8880"]
 2021-05-16 16:15:17.907 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
@@ -46,8 +46,8 @@
 2021-05-16 16:15:17.974 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
 2021-05-16 16:15:17.979 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8880"]
 2021-05-16 16:15:17.982 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8880 (http) with context path ''
-2021-05-16 16:15:17.986 INFO  com.xuwen.wiki.WikiApplication                    :61   [32m                  [0;39m Started WikiApplication in 0.236 seconds (JVM running for 16.241)
+2021-05-16 16:15:17.986 INFO  com.xuwen.wiki.config.WikiApplication                    :61   [32m                  [0;39m Started WikiApplication in 0.236 seconds (JVM running for 16.241)
 2021-05-16 16:15:17.987 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
-2021-05-16 16:15:17.988 INFO  com.xuwen.wiki.WikiApplication                    :20   [32m                  [0;39m 启动成功！！！success!!!
-2021-05-16 16:15:17.988 INFO  com.xuwen.wiki.WikiApplication                    :21   [32m                  [0;39m 地址：	http://127.0.0.1:8880
+2021-05-16 16:15:17.988 INFO  com.xuwen.wiki.config.WikiApplication                    :20   [32m                  [0;39m 启动成功！！！success!!!
+2021-05-16 16:15:17.988 INFO  com.xuwen.wiki.config.WikiApplication                    :21   [32m                  [0;39m 地址：	http://127.0.0.1:8880
 2021-05-16 16:15:23.107 INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor  :218  [32m                  [0;39m Shutting down ExecutorService 'applicationTaskExecutor'

@@ -28,15 +28,15 @@
         </jdbcConnection>
 
         <!-- domain类的位置 -->
-        <javaModelGenerator targetProject="src\main\java"
+        <javaModelGenerator targetProject="src/main/java"
                             targetPackage="com.xuwen.wiki.domain"/>
 
         <!-- mapper xml的位置 -->
-        <sqlMapGenerator targetProject="src\main\resources"
+        <sqlMapGenerator targetProject="src/main/resources"
                          targetPackage="mapper"/>
 
         <!-- mapper类的位置 -->
-        <javaClientGenerator targetProject="src\main\java"
+        <javaClientGenerator targetProject="src/main/java"
                              targetPackage="com.xuwen.wiki.mapper"
                              type="XMLMAPPER"/>
 

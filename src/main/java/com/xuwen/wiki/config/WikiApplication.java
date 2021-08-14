@@ -8,9 +8,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.core.env.ConfigurableEnvironment;
 
+
+@MapperScan("com.xuwen.wiki.mapper")
 @ComponentScan("com.xuwen.wiki")
 @SpringBootApplication
-@MapperScan("com.xuwen.wiki.mapper")
 public class WikiApplication {
     
     private static final Logger LOG = LoggerFactory.getLogger(WikiApplication.class);

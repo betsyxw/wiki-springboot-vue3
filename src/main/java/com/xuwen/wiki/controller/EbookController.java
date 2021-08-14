@@ -1,5 +1,6 @@
 package com.xuwen.wiki.controller;
 
+import com.xuwen.resp.CommonResp;
 import com.xuwen.wiki.domain.Ebook;
 import com.xuwen.wiki.service.EbookService;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,7 +24,10 @@ public class EbookController {
 
 
     @GetMapping("/list")
-    public List<Ebook> list(){
-        return ebookService.list();
+    public CommonResp list(){
+        CommonResp<List<Ebook>> resp = new CommonResp<>();
+        List<Ebook> list = ebookService.list();
+        resp.setContent(list);
+        return resp;
     }
 }

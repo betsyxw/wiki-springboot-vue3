@@ -8,6 +8,7 @@
               v-model:selectedKeys="selectedKeys1"
               :style="{ lineHeight: '64px' }"
       >
+
         <a-menu-item key="1">nav 1</a-menu-item>
         <a-menu-item key="2">nav 2</a-menu-item>
         <a-menu-item key="3">nav 3</a-menu-item>
@@ -19,6 +20,14 @@
     </a-layout-footer>
   </a-layout>
 </template>
+
+<script lang="ts">
+  import { defineComponent } from 'vue';
+
+  export default defineComponent({
+    name: 'the-header'
+  });
+</script>
 
 <style>
   #components-layout-demo-top-side-2 .logo {
@@ -39,3 +48,4 @@
   }
 
 </style>
+

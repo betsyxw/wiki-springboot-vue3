@@ -432,3 +432,28 @@ java.lang.IllegalArgumentException: The HTTP header line [> {%: ] does not confo
 2021-08-14 18:48:29.049 INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor  :218  [32m                  [0;39m Shutting down ExecutorService 'applicationTaskExecutor'
 2021-08-14 18:48:29.050 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-1 - Shutdown initiated...
 2021-08-14 18:48:29.058 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-1 - Shutdown completed.
+2021-08-14 19:18:13.567 INFO  com.xuwen.wiki.config.WikiApplication             :55   [32m                  [0;39m Starting WikiApplication using Java 1.8.0_212 on wen2015mbp.lan with PID 92969 (/Users/xuwen/Desktop/springboot/wiki-springboot-vue3/target/classes started by xuwen in /Users/xuwen/Desktop/springboot/wiki-springboot-vue3)
+2021-08-14 19:18:13.570 INFO  com.xuwen.wiki.config.WikiApplication             :660  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2021-08-14 19:18:13.629 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-08-14 19:18:13.629 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-08-14 19:18:14.612 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8880 (http)
+2021-08-14 19:18:14.622 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8880"]
+2021-08-14 19:18:14.623 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2021-08-14 19:18:14.624 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.39]
+2021-08-14 19:18:14.690 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2021-08-14 19:18:14.690 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :289  [32m                  [0;39m Root WebApplicationContext: initialization completed in 1060 ms
+2021-08-14 19:18:15.193 INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor  :181  [32m                  [0;39m Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-14 19:18:15.396 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2021-08-14 19:18:15.413 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8880"]
+2021-08-14 19:18:15.440 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8880 (http) with context path ''
+2021-08-14 19:18:15.452 INFO  com.xuwen.wiki.config.WikiApplication             :61   [32m                  [0;39m Started WikiApplication in 2.269 seconds (JVM running for 2.771)
+2021-08-14 19:18:15.455 INFO  com.xuwen.wiki.config.WikiApplication             :23   [32m                  [0;39m 启动成功！！！success
+2021-08-14 19:18:15.455 INFO  com.xuwen.wiki.config.WikiApplication             :24   [32m                  [0;39m 地址：	http://127.0.0.1:8880
+2021-08-14 19:18:19.630 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-08-14 19:18:19.630 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2021-08-14 19:18:19.632 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 1 ms
+2021-08-14 19:18:19.697 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-1 - Starting...
+2021-08-14 19:18:19.911 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-1 - Start completed.
+2021-08-14 19:18:27.350 INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor  :218  [32m                  [0;39m Shutting down ExecutorService 'applicationTaskExecutor'
+2021-08-14 19:18:27.351 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-1 - Shutdown initiated...
+2021-08-14 19:18:27.361 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-1 - Shutdown completed.

@@ -34,7 +34,7 @@
             const ebooks = ref();
             const pagination = ref({
                 current: 1,
-                pageSize: 2,
+                pageSize: 3,
                 total: 0
             });
             const loading = ref(false);
@@ -64,7 +64,7 @@
                     key: 'voteCount'
                 },
                 {
-                    title: 'Aciton',
+                    title: '操作',
                     key: 'aciton',
                     slots:{customRender: 'action'}
                 }

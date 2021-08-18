@@ -4,7 +4,7 @@
               :style="{ background: '#fff', padding: '24px', margin: 0, minHeight: '280px' }"
       >
         <div class="about">
-          <h1>电子书后台管理</h1>
+<!--          <h1>电子书后台管理</h1>-->
             <a-table :columns="columns" :row-key="record=> record.id"
                      :data-source="ebooks" :pagination="pagination"
                      :loading="loading" @change="handleTableChange">
@@ -115,3 +115,10 @@
         }
     });
 </script>
+
+
+<style scoped>
+    img{
+        width:50px;
+    }
+</style>

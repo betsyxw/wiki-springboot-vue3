@@ -1,11 +1,15 @@
 package com.xuwen.wiki.service;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.xuwen.req.EbookReq;
 import com.xuwen.resp.EbookResp;
 import com.xuwen.util.CopyUtil;
 import com.xuwen.wiki.domain.Ebook;
 import com.xuwen.wiki.domain.EbookExample;
 import com.xuwen.wiki.mapper.EbookMapper;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import org.springframework.util.ObjectUtils;
 
@@ -18,17 +22,26 @@ import java.util.List;
  */
 @Service
 public class EbookService {
+    private static final Logger LOG = LoggerFactory.getLogger(EbookService.class);
+
     @Resource
     private EbookMapper ebookMapper;
 
     public List<EbookResp> list(EbookReq req){
+
         //根据书名查找,字符串拼接
         EbookExample ebookExample = new EbookExample();
         EbookExample.Criteria criteria = ebookExample.createCriteria();
         if(!ObjectUtils.isEmpty(req.getName())){
             criteria.andNameLike("%"+req.getName()+"%");
         }
+        //导入分页插件pom，然后写,pagehelper就+limit而已
+        PageHelper.startPage(1,3);
         List<Ebook> ebooksList = ebookMapper.selectByExample(ebookExample);
+        PageInfo<Ebook> pageInfo = new PageInfo<>(ebooksList);
+        LOG.info("总行数：{}",pageInfo.getTotal());
+        LOG.info("总页数：{}",pageInfo.getPages());
+
 
 //        List<EbookResp> respList = new ArrayList<>();
 //        for (Ebook ebook : ebooksList) {

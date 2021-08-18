@@ -1162,3 +1162,623 @@ Caused by: java.lang.ClassNotFoundException: com.xuwen.wiki.service.EbookService
 2021-08-18 19:06:38.573 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
 2021-08-18 19:06:38.573 INFO  com.xuwen.wiki.config.WikiApplication             :23   [32m                  [0;39m 启动成功！！！success
 2021-08-18 19:06:38.573 INFO  com.xuwen.wiki.config.WikiApplication             :24   [32m                  [0;39m 地址：	http://127.0.0.1:8880
+2021-08-18 19:07:16.605 INFO  o.a.c.c.ContainerBase.[Tomcat-1].[localhost].[/]  :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-08-18 19:07:16.605 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2021-08-18 19:07:16.607 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 1 ms
+2021-08-18 19:07:16.618 INFO  com.xuwen.wiki.aspect.LogAspect                   :53   [32m                  [0;39m ------------- 开始 -------------
+2021-08-18 19:07:16.619 INFO  com.xuwen.wiki.aspect.LogAspect                   :54   [32m                  [0;39m 请求地址: http://127.0.0.1:8880/ebook/list GET
+2021-08-18 19:07:16.619 INFO  com.xuwen.wiki.aspect.LogAspect                   :55   [32m                  [0;39m 类名方法: com.xuwen.wiki.controller.EbookController.list
+2021-08-18 19:07:16.619 INFO  com.xuwen.wiki.aspect.LogAspect                   :56   [32m                  [0;39m 远程地址: 127.0.0.1
+2021-08-18 19:07:16.620 INFO  com.xuwen.wiki.aspect.LogAspect                   :78   [32m                  [0;39m 请求参数: [{}]
+2021-08-18 19:07:16.627 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-2 - Starting...
+2021-08-18 19:07:16.706 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-2 - Start completed.
+2021-08-18 19:07:16.708 DEBUG c.x.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM ebook
+2021-08-18 19:07:16.708 DEBUG c.x.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m ==> Parameters: 
+2021-08-18 19:07:16.715 TRACE c.x.wiki.mapper.EbookMapper.selectByExample_COUNT :143  [32m                  [0;39m <==    Columns: count(0)
+2021-08-18 19:07:16.715 TRACE c.x.wiki.mapper.EbookMapper.selectByExample_COUNT :143  [32m                  [0;39m <==        Row: 5
+2021-08-18 19:07:16.716 DEBUG c.x.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m <==      Total: 1
+2021-08-18 19:07:16.717 DEBUG com.xuwen.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m ==>  Preparing: select id, `name`, category1_id, category2_id, description, cover, doc_count, view_count, vote_count from ebook LIMIT ?
+2021-08-18 19:07:16.717 DEBUG com.xuwen.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m ==> Parameters: 3(Integer)
+2021-08-18 19:07:16.724 TRACE com.xuwen.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==    Columns: id, name, category1_id, category2_id, description, cover, doc_count, view_count, vote_count
+2021-08-18 19:07:16.724 TRACE com.xuwen.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 1, Spring Boot 入门教程, null, null, 零基础入门 Java 开发，企业级应用开发最佳首选框架, /image/cover2.png, 0, 0, 0
+2021-08-18 19:07:16.726 TRACE com.xuwen.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 2, Vue 入门教程, null, null, 零基础入门 Vue 开发，企业级应用开发最佳首选框架, /image/cover2.png, 0, 0, 0
+2021-08-18 19:07:16.727 TRACE com.xuwen.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 3, Python 入门教程, null, null, 零基础入门 Python 开发，企业级应用开发最佳首选框架, null, 0, 0, 0
+2021-08-18 19:07:16.728 DEBUG com.xuwen.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m <==      Total: 3
+2021-08-18 19:07:16.730 INFO  com.xuwen.wiki.service.EbookService               :42   [32m                  [0;39m 总行数：5
+2021-08-18 19:07:16.730 INFO  com.xuwen.wiki.service.EbookService               :43   [32m                  [0;39m 总页数：2
+2021-08-18 19:07:16.738 INFO  com.xuwen.wiki.aspect.LogAspect                   :90   [32m                  [0;39m 返回结果: {"content":[{"cover":"/image/cover2.png","description":"零基础入门 Java 开发，企业级应用开发最佳首选框架","docCount":0,"id":1,"name":"Spring Boot 入门教程","viewCount":0,"voteCount":0},{"cover":"/image/cover2.png","description":"零基础入门 Vue 开发，企业级应用开发最佳首选框架","docCount":0,"id":2,"name":"Vue 入门教程","viewCount":0,"voteCount":0},{"description":"零基础入门 Python 开发，企业级应用开发最佳首选框架","docCount":0,"id":3,"name":"Python 入门教程","viewCount":0,"voteCount":0}],"success":true}
+2021-08-18 19:07:16.738 INFO  com.xuwen.wiki.aspect.LogAspect                   :91   [32m                  [0;39m ------------- 结束 耗时：120 ms -------------
+2021-08-18 19:17:32.647 INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor  :218  [32m                  [0;39m Shutting down ExecutorService 'applicationTaskExecutor'
+2021-08-18 19:17:32.649 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-2 - Shutdown initiated...
+2021-08-18 19:17:32.654 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-2 - Shutdown completed.
+2021-08-18 19:17:32.848 INFO  com.xuwen.wiki.config.WikiApplication             :55   [32m                  [0;39m Starting WikiApplication using Java 1.8.0_212 on wen2015mbp.lan with PID 15546 (/Users/xuwen/Desktop/springboot/wiki-springboot-vue3/target/classes started by xuwen in /Users/xuwen/Desktop/springboot/wiki-springboot-vue3)
+2021-08-18 19:17:32.849 INFO  com.xuwen.wiki.config.WikiApplication             :660  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2021-08-18 19:17:33.049 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8880 (http)
+2021-08-18 19:17:33.049 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8880"]
+2021-08-18 19:17:33.050 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2021-08-18 19:17:33.050 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.39]
+2021-08-18 19:17:33.056 INFO  o.a.c.c.ContainerBase.[Tomcat-1].[localhost].[/]  :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2021-08-18 19:17:33.056 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :289  [32m                  [0;39m Root WebApplicationContext: initialization completed in 205 ms
+2021-08-18 19:17:33.254 INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor  :181  [32m                  [0;39m Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-18 19:17:33.403 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2021-08-18 19:17:33.414 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8880"]
+2021-08-18 19:17:33.415 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8880 (http) with context path ''
+2021-08-18 19:17:33.419 INFO  com.xuwen.wiki.config.WikiApplication             :61   [32m                  [0;39m Started WikiApplication in 0.602 seconds (JVM running for 1118.324)
+2021-08-18 19:17:33.421 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2021-08-18 19:17:33.421 INFO  com.xuwen.wiki.config.WikiApplication             :23   [32m                  [0;39m 启动成功！！！success
+2021-08-18 19:17:33.421 INFO  com.xuwen.wiki.config.WikiApplication             :24   [32m                  [0;39m 地址：	http://127.0.0.1:8880
+2021-08-18 19:17:54.227 INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor  :218  [32m                  [0;39m Shutting down ExecutorService 'applicationTaskExecutor'
+2021-08-18 19:17:54.414 INFO  com.xuwen.wiki.config.WikiApplication             :55   [32m                  [0;39m Starting WikiApplication using Java 1.8.0_212 on wen2015mbp.lan with PID 15546 (/Users/xuwen/Desktop/springboot/wiki-springboot-vue3/target/classes started by xuwen in /Users/xuwen/Desktop/springboot/wiki-springboot-vue3)
+2021-08-18 19:17:54.415 INFO  com.xuwen.wiki.config.WikiApplication             :660  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2021-08-18 19:17:54.619 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8880 (http)
+2021-08-18 19:17:54.619 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8880"]
+2021-08-18 19:17:54.620 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2021-08-18 19:17:54.620 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.39]
+2021-08-18 19:17:54.626 INFO  o.a.c.c.ContainerBase.[Tomcat-1].[localhost].[/]  :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2021-08-18 19:17:54.626 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :289  [32m                  [0;39m Root WebApplicationContext: initialization completed in 206 ms
+2021-08-18 19:17:54.804 INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor  :181  [32m                  [0;39m Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-18 19:17:54.947 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2021-08-18 19:17:54.956 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8880"]
+2021-08-18 19:17:54.958 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8880 (http) with context path ''
+2021-08-18 19:17:54.962 INFO  com.xuwen.wiki.config.WikiApplication             :61   [32m                  [0;39m Started WikiApplication in 0.581 seconds (JVM running for 1139.867)
+2021-08-18 19:17:54.963 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2021-08-18 19:17:54.963 INFO  com.xuwen.wiki.config.WikiApplication             :23   [32m                  [0;39m 启动成功！！！success
+2021-08-18 19:17:54.964 INFO  com.xuwen.wiki.config.WikiApplication             :24   [32m                  [0;39m 地址：	http://127.0.0.1:8880
+2021-08-18 19:18:55.611 INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor  :218  [32m                  [0;39m Shutting down ExecutorService 'applicationTaskExecutor'
+2021-08-18 19:18:55.721 INFO  com.xuwen.wiki.config.WikiApplication             :55   [32m                  [0;39m Starting WikiApplication using Java 1.8.0_212 on wen2015mbp.lan with PID 15546 (/Users/xuwen/Desktop/springboot/wiki-springboot-vue3/target/classes started by xuwen in /Users/xuwen/Desktop/springboot/wiki-springboot-vue3)
+2021-08-18 19:18:55.721 INFO  com.xuwen.wiki.config.WikiApplication             :660  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2021-08-18 19:18:55.903 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8880 (http)
+2021-08-18 19:18:55.903 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8880"]
+2021-08-18 19:18:55.903 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2021-08-18 19:18:55.904 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.39]
+2021-08-18 19:18:55.909 INFO  o.a.c.c.ContainerBase.[Tomcat-1].[localhost].[/]  :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2021-08-18 19:18:55.909 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :289  [32m                  [0;39m Root WebApplicationContext: initialization completed in 186 ms
+2021-08-18 19:18:56.087 INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor  :181  [32m                  [0;39m Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-18 19:18:56.229 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2021-08-18 19:18:56.239 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8880"]
+2021-08-18 19:18:56.240 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8880 (http) with context path ''
+2021-08-18 19:18:56.244 INFO  com.xuwen.wiki.config.WikiApplication             :61   [32m                  [0;39m Started WikiApplication in 0.549 seconds (JVM running for 1201.151)
+2021-08-18 19:18:56.245 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2021-08-18 19:18:56.245 INFO  com.xuwen.wiki.config.WikiApplication             :23   [32m                  [0;39m 启动成功！！！success
+2021-08-18 19:18:56.245 INFO  com.xuwen.wiki.config.WikiApplication             :24   [32m                  [0;39m 地址：	http://127.0.0.1:8880
+2021-08-18 19:19:32.270 INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor  :218  [32m                  [0;39m Shutting down ExecutorService 'applicationTaskExecutor'
+2021-08-18 19:19:32.381 INFO  com.xuwen.wiki.config.WikiApplication             :55   [32m                  [0;39m Starting WikiApplication using Java 1.8.0_212 on wen2015mbp.lan with PID 15546 (/Users/xuwen/Desktop/springboot/wiki-springboot-vue3/target/classes started by xuwen in /Users/xuwen/Desktop/springboot/wiki-springboot-vue3)
+2021-08-18 19:19:32.382 INFO  com.xuwen.wiki.config.WikiApplication             :660  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2021-08-18 19:19:32.553 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8880 (http)
+2021-08-18 19:19:32.554 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8880"]
+2021-08-18 19:19:32.554 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2021-08-18 19:19:32.555 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.39]
+2021-08-18 19:19:32.560 INFO  o.a.c.c.ContainerBase.[Tomcat-1].[localhost].[/]  :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2021-08-18 19:19:32.560 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :289  [32m                  [0;39m Root WebApplicationContext: initialization completed in 177 ms
+2021-08-18 19:19:32.739 INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor  :181  [32m                  [0;39m Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-18 19:19:32.874 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2021-08-18 19:19:32.883 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8880"]
+2021-08-18 19:19:32.885 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8880 (http) with context path ''
+2021-08-18 19:19:32.889 INFO  com.xuwen.wiki.config.WikiApplication             :61   [32m                  [0;39m Started WikiApplication in 0.533 seconds (JVM running for 1237.797)
+2021-08-18 19:19:32.890 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2021-08-18 19:19:32.890 INFO  com.xuwen.wiki.config.WikiApplication             :23   [32m                  [0;39m 启动成功！！！success
+2021-08-18 19:19:32.891 INFO  com.xuwen.wiki.config.WikiApplication             :24   [32m                  [0;39m 地址：	http://127.0.0.1:8880
+2021-08-18 19:19:45.008 INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor  :218  [32m                  [0;39m Shutting down ExecutorService 'applicationTaskExecutor'
+2021-08-18 19:19:45.107 INFO  com.xuwen.wiki.config.WikiApplication             :55   [32m                  [0;39m Starting WikiApplication using Java 1.8.0_212 on wen2015mbp.lan with PID 15546 (/Users/xuwen/Desktop/springboot/wiki-springboot-vue3/target/classes started by xuwen in /Users/xuwen/Desktop/springboot/wiki-springboot-vue3)
+2021-08-18 19:19:45.107 INFO  com.xuwen.wiki.config.WikiApplication             :660  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2021-08-18 19:19:45.284 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8880 (http)
+2021-08-18 19:19:45.285 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8880"]
+2021-08-18 19:19:45.286 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2021-08-18 19:19:45.286 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.39]
+2021-08-18 19:19:45.292 INFO  o.a.c.c.ContainerBase.[Tomcat-1].[localhost].[/]  :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2021-08-18 19:19:45.292 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :289  [32m                  [0;39m Root WebApplicationContext: initialization completed in 184 ms
+2021-08-18 19:19:45.475 INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor  :181  [32m                  [0;39m Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-18 19:19:45.607 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2021-08-18 19:19:45.616 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8880"]
+2021-08-18 19:19:45.618 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8880 (http) with context path ''
+2021-08-18 19:19:45.621 INFO  com.xuwen.wiki.config.WikiApplication             :61   [32m                  [0;39m Started WikiApplication in 0.534 seconds (JVM running for 1250.529)
+2021-08-18 19:19:45.622 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2021-08-18 19:19:45.622 INFO  com.xuwen.wiki.config.WikiApplication             :23   [32m                  [0;39m 启动成功！！！success
+2021-08-18 19:19:45.622 INFO  com.xuwen.wiki.config.WikiApplication             :24   [32m                  [0;39m 地址：	http://127.0.0.1:8880
+2021-08-18 19:20:21.879 INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor  :218  [32m                  [0;39m Shutting down ExecutorService 'applicationTaskExecutor'
+2021-08-18 19:20:32.181 INFO  com.xuwen.wiki.config.WikiApplication             :55   [32m                  [0;39m Starting WikiApplication using Java 1.8.0_212 on wen2015mbp.lan with PID 15889 (/Users/xuwen/Desktop/springboot/wiki-springboot-vue3/target/classes started by xuwen in /Users/xuwen/Desktop/springboot/wiki-springboot-vue3)
+2021-08-18 19:20:32.185 INFO  com.xuwen.wiki.config.WikiApplication             :660  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2021-08-18 19:20:32.242 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-08-18 19:20:32.242 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-08-18 19:20:33.342 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8880 (http)
+2021-08-18 19:20:33.349 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8880"]
+2021-08-18 19:20:33.350 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2021-08-18 19:20:33.350 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.39]
+2021-08-18 19:20:33.404 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2021-08-18 19:20:33.404 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :289  [32m                  [0;39m Root WebApplicationContext: initialization completed in 1160 ms
+2021-08-18 19:20:34.009 INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor  :181  [32m                  [0;39m Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-18 19:20:34.297 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2021-08-18 19:20:34.316 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8880"]
+2021-08-18 19:20:34.341 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8880 (http) with context path ''
+2021-08-18 19:20:34.352 INFO  com.xuwen.wiki.config.WikiApplication             :61   [32m                  [0;39m Started WikiApplication in 2.547 seconds (JVM running for 3.057)
+2021-08-18 19:20:34.355 INFO  com.xuwen.wiki.config.WikiApplication             :23   [32m                  [0;39m 启动成功！！！success
+2021-08-18 19:20:34.355 INFO  com.xuwen.wiki.config.WikiApplication             :24   [32m                  [0;39m 地址：	http://127.0.0.1:8880
+2021-08-18 19:20:38.033 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-08-18 19:20:38.033 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2021-08-18 19:20:38.035 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 1 ms
+2021-08-18 19:20:38.067 INFO  com.xuwen.wiki.aspect.LogAspect                   :53   [32m                  [0;39m ------------- 开始 -------------
+2021-08-18 19:20:38.068 INFO  com.xuwen.wiki.aspect.LogAspect                   :54   [32m                  [0;39m 请求地址: http://localhost:8880/ebook/list GET
+2021-08-18 19:20:38.068 INFO  com.xuwen.wiki.aspect.LogAspect                   :55   [32m                  [0;39m 类名方法: com.xuwen.wiki.controller.EbookController.list
+2021-08-18 19:20:38.069 INFO  com.xuwen.wiki.aspect.LogAspect                   :56   [32m                  [0;39m 远程地址: 127.0.0.1
+2021-08-18 19:20:38.122 INFO  com.xuwen.wiki.aspect.LogAspect                   :78   [32m                  [0;39m 请求参数: [{"page":1,"size":4}]
+2021-08-18 19:20:38.158 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-1 - Starting...
+2021-08-18 19:20:38.364 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-1 - Start completed.
+2021-08-18 19:20:38.400 DEBUG c.x.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM ebook
+2021-08-18 19:20:38.421 DEBUG c.x.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m ==> Parameters: 
+2021-08-18 19:20:38.449 TRACE c.x.wiki.mapper.EbookMapper.selectByExample_COUNT :143  [32m                  [0;39m <==    Columns: count(0)
+2021-08-18 19:20:38.449 TRACE c.x.wiki.mapper.EbookMapper.selectByExample_COUNT :143  [32m                  [0;39m <==        Row: 5
+2021-08-18 19:20:38.451 DEBUG c.x.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m <==      Total: 1
+2021-08-18 19:20:38.453 DEBUG com.xuwen.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m ==>  Preparing: select id, `name`, category1_id, category2_id, description, cover, doc_count, view_count, vote_count from ebook LIMIT ?
+2021-08-18 19:20:38.453 DEBUG com.xuwen.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m ==> Parameters: 4(Integer)
+2021-08-18 19:20:38.461 TRACE com.xuwen.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==    Columns: id, name, category1_id, category2_id, description, cover, doc_count, view_count, vote_count
+2021-08-18 19:20:38.462 TRACE com.xuwen.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 1, Spring Boot 入门教程, null, null, 零基础入门 Java 开发，企业级应用开发最佳首选框架, /image/cover2.png, 0, 0, 0
+2021-08-18 19:20:38.463 TRACE com.xuwen.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 2, Vue 入门教程, null, null, 零基础入门 Vue 开发，企业级应用开发最佳首选框架, /image/cover2.png, 0, 0, 0
+2021-08-18 19:20:38.464 TRACE com.xuwen.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 3, Python 入门教程, null, null, 零基础入门 Python 开发，企业级应用开发最佳首选框架, null, 0, 0, 0
+2021-08-18 19:20:38.465 TRACE com.xuwen.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 4, Mysql 入门教程, null, null, 零基础入门 Mysql 开发，企业级应用开发最佳首选框架, null, 0, 0, 0
+2021-08-18 19:20:38.466 DEBUG com.xuwen.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m <==      Total: 4
+2021-08-18 19:20:38.467 INFO  com.xuwen.wiki.service.EbookService               :42   [32m                  [0;39m 总行数：5
+2021-08-18 19:20:38.468 INFO  com.xuwen.wiki.service.EbookService               :43   [32m                  [0;39m 总页数：2
+2021-08-18 19:20:38.479 INFO  com.xuwen.wiki.aspect.LogAspect                   :90   [32m                  [0;39m 返回结果: {"content":[{"cover":"/image/cover2.png","description":"零基础入门 Java 开发，企业级应用开发最佳首选框架","docCount":0,"id":1,"name":"Spring Boot 入门教程","viewCount":0,"voteCount":0},{"cover":"/image/cover2.png","description":"零基础入门 Vue 开发，企业级应用开发最佳首选框架","docCount":0,"id":2,"name":"Vue 入门教程","viewCount":0,"voteCount":0},{"description":"零基础入门 Python 开发，企业级应用开发最佳首选框架","docCount":0,"id":3,"name":"Python 入门教程","viewCount":0,"voteCount":0},{"description":"零基础入门 Mysql 开发，企业级应用开发最佳首选框架","docCount":0,"id":4,"name":"Mysql 入门教程","viewCount":0,"voteCount":0}],"success":true}
+2021-08-18 19:20:38.480 INFO  com.xuwen.wiki.aspect.LogAspect                   :91   [32m                  [0;39m ------------- 结束 耗时：414 ms -------------
+2021-08-18 19:22:06.989 INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor  :218  [32m                  [0;39m Shutting down ExecutorService 'applicationTaskExecutor'
+2021-08-18 19:22:06.990 INFO  com.zaxxer.hikari.HikariDataSource                :350  [32m                  [0;39m HikariPool-1 - Shutdown initiated...
+2021-08-18 19:22:07.000 INFO  com.zaxxer.hikari.HikariDataSource                :352  [32m                  [0;39m HikariPool-1 - Shutdown completed.
+2021-08-18 19:22:07.159 INFO  com.xuwen.wiki.config.WikiApplication             :55   [32m                  [0;39m Starting WikiApplication using Java 1.8.0_212 on wen2015mbp.lan with PID 15889 (/Users/xuwen/Desktop/springboot/wiki-springboot-vue3/target/classes started by xuwen in /Users/xuwen/Desktop/springboot/wiki-springboot-vue3)
+2021-08-18 19:22:07.159 INFO  com.xuwen.wiki.config.WikiApplication             :660  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2021-08-18 19:22:07.385 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8880 (http)
+2021-08-18 19:22:07.385 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8880"]
+2021-08-18 19:22:07.386 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2021-08-18 19:22:07.386 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.39]
+2021-08-18 19:22:07.393 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2021-08-18 19:22:07.393 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :289  [32m                  [0;39m Root WebApplicationContext: initialization completed in 231 ms
+2021-08-18 19:22:07.616 INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor  :181  [32m                  [0;39m Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-18 19:22:07.775 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2021-08-18 19:22:07.787 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8880"]
+2021-08-18 19:22:07.789 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8880 (http) with context path ''
+2021-08-18 19:22:07.792 INFO  com.xuwen.wiki.config.WikiApplication             :61   [32m                  [0;39m Started WikiApplication in 0.666 seconds (JVM running for 96.5)
+2021-08-18 19:22:07.794 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2021-08-18 19:22:07.794 INFO  com.xuwen.wiki.config.WikiApplication             :23   [32m                  [0;39m 启动成功！！！success
+2021-08-18 19:22:07.795 INFO  com.xuwen.wiki.config.WikiApplication             :24   [32m                  [0;39m 地址：	http://127.0.0.1:8880
+2021-08-18 19:22:37.745 INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor  :218  [32m                  [0;39m Shutting down ExecutorService 'applicationTaskExecutor'
+2021-08-18 19:22:37.900 INFO  com.xuwen.wiki.config.WikiApplication             :55   [32m                  [0;39m Starting WikiApplication using Java 1.8.0_212 on wen2015mbp.lan with PID 15889 (/Users/xuwen/Desktop/springboot/wiki-springboot-vue3/target/classes started by xuwen in /Users/xuwen/Desktop/springboot/wiki-springboot-vue3)
+2021-08-18 19:22:37.900 INFO  com.xuwen.wiki.config.WikiApplication             :660  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2021-08-18 19:22:38.114 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8880 (http)
+2021-08-18 19:22:38.115 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8880"]
+2021-08-18 19:22:38.115 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2021-08-18 19:22:38.116 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.39]
+2021-08-18 19:22:38.124 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2021-08-18 19:22:38.124 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :289  [32m                  [0;39m Root WebApplicationContext: initialization completed in 221 ms
+2021-08-18 19:22:38.325 INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor  :181  [32m                  [0;39m Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-18 19:22:38.473 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2021-08-18 19:22:38.483 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8880"]
+2021-08-18 19:22:38.485 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8880 (http) with context path ''
+2021-08-18 19:22:38.489 INFO  com.xuwen.wiki.config.WikiApplication             :61   [32m                  [0;39m Started WikiApplication in 0.62 seconds (JVM running for 127.197)
+2021-08-18 19:22:38.490 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2021-08-18 19:22:38.490 INFO  com.xuwen.wiki.config.WikiApplication             :23   [32m                  [0;39m 启动成功！！！success
+2021-08-18 19:22:38.490 INFO  com.xuwen.wiki.config.WikiApplication             :24   [32m                  [0;39m 地址：	http://127.0.0.1:8880
+2021-08-18 19:22:55.261 INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor  :218  [32m                  [0;39m Shutting down ExecutorService 'applicationTaskExecutor'
+2021-08-18 19:22:55.415 INFO  com.xuwen.wiki.config.WikiApplication             :55   [32m                  [0;39m Starting WikiApplication using Java 1.8.0_212 on wen2015mbp.lan with PID 15889 (/Users/xuwen/Desktop/springboot/wiki-springboot-vue3/target/classes started by xuwen in /Users/xuwen/Desktop/springboot/wiki-springboot-vue3)
+2021-08-18 19:22:55.416 INFO  com.xuwen.wiki.config.WikiApplication             :660  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2021-08-18 19:22:55.594 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8880 (http)
+2021-08-18 19:22:55.595 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8880"]
+2021-08-18 19:22:55.595 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2021-08-18 19:22:55.595 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.39]
+2021-08-18 19:22:55.607 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2021-08-18 19:22:55.607 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :289  [32m                  [0;39m Root WebApplicationContext: initialization completed in 189 ms
+2021-08-18 19:22:55.811 INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor  :181  [32m                  [0;39m Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-18 19:22:55.965 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2021-08-18 19:22:55.976 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8880"]
+2021-08-18 19:22:55.978 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8880 (http) with context path ''
+2021-08-18 19:22:55.981 INFO  com.xuwen.wiki.config.WikiApplication             :61   [32m                  [0;39m Started WikiApplication in 0.596 seconds (JVM running for 144.69)
+2021-08-18 19:22:55.983 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2021-08-18 19:22:55.983 INFO  com.xuwen.wiki.config.WikiApplication             :23   [32m                  [0;39m 启动成功！！！success
+2021-08-18 19:22:55.984 INFO  com.xuwen.wiki.config.WikiApplication             :24   [32m                  [0;39m 地址：	http://127.0.0.1:8880
+2021-08-18 19:23:38.013 INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor  :218  [32m                  [0;39m Shutting down ExecutorService 'applicationTaskExecutor'
+2021-08-18 19:23:38.135 INFO  com.xuwen.wiki.config.WikiApplication             :55   [32m                  [0;39m Starting WikiApplication using Java 1.8.0_212 on wen2015mbp.lan with PID 15889 (/Users/xuwen/Desktop/springboot/wiki-springboot-vue3/target/classes started by xuwen in /Users/xuwen/Desktop/springboot/wiki-springboot-vue3)
+2021-08-18 19:23:38.136 INFO  com.xuwen.wiki.config.WikiApplication             :660  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2021-08-18 19:23:38.325 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8880 (http)
+2021-08-18 19:23:38.326 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8880"]
+2021-08-18 19:23:38.326 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2021-08-18 19:23:38.327 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.39]
+2021-08-18 19:23:38.332 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2021-08-18 19:23:38.332 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :289  [32m                  [0;39m Root WebApplicationContext: initialization completed in 194 ms
+2021-08-18 19:23:38.519 INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor  :181  [32m                  [0;39m Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-18 19:23:38.659 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2021-08-18 19:23:38.668 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8880"]
+2021-08-18 19:23:38.670 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8880 (http) with context path ''
+2021-08-18 19:23:38.674 INFO  com.xuwen.wiki.config.WikiApplication             :61   [32m                  [0;39m Started WikiApplication in 0.567 seconds (JVM running for 187.384)
+2021-08-18 19:23:38.676 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2021-08-18 19:23:38.676 INFO  com.xuwen.wiki.config.WikiApplication             :23   [32m                  [0;39m 启动成功！！！success
+2021-08-18 19:23:38.676 INFO  com.xuwen.wiki.config.WikiApplication             :24   [32m                  [0;39m 地址：	http://127.0.0.1:8880
+2021-08-18 19:24:38.939 INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor  :218  [32m                  [0;39m Shutting down ExecutorService 'applicationTaskExecutor'
+2021-08-18 19:24:39.032 INFO  com.xuwen.wiki.config.WikiApplication             :55   [32m                  [0;39m Starting WikiApplication using Java 1.8.0_212 on wen2015mbp.lan with PID 15889 (/Users/xuwen/Desktop/springboot/wiki-springboot-vue3/target/classes started by xuwen in /Users/xuwen/Desktop/springboot/wiki-springboot-vue3)
+2021-08-18 19:24:39.033 INFO  com.xuwen.wiki.config.WikiApplication             :660  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2021-08-18 19:24:39.223 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8880 (http)
+2021-08-18 19:24:39.224 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8880"]
+2021-08-18 19:24:39.224 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2021-08-18 19:24:39.224 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.39]
+2021-08-18 19:24:39.230 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2021-08-18 19:24:39.231 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :289  [32m                  [0;39m Root WebApplicationContext: initialization completed in 195 ms
+2021-08-18 19:24:39.329 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext:596  [32m                  [0;39m Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'ebookController' defined in file [/Users/xuwen/Desktop/springboot/wiki-springboot-vue3/target/classes/com/xuwen/wiki/controller/EbookController.class]: Post-processing of merged bean definition failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.xuwen.wiki.controller.EbookController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@369454a5]
+2021-08-18 19:24:39.329 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Stopping service [Tomcat]
+2021-08-18 19:24:39.335 INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener:136  [32m                  [0;39m 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-08-18 19:24:39.351 ERROR org.springframework.boot.SpringApplication        :856  [32m                  [0;39m Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'ebookController' defined in file [/Users/xuwen/Desktop/springboot/wiki-springboot-vue3/target/classes/com/xuwen/wiki/controller/EbookController.class]: Post-processing of merged bean definition failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.xuwen.wiki.controller.EbookController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@369454a5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:586)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:925)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:588)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at com.xuwen.wiki.config.WikiApplication.main(WikiApplication.java:22)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.xuwen.wiki.controller.EbookController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@369454a5]
+	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:737)
+	at org.springframework.util.ReflectionUtils.doWithLocalFields(ReflectionUtils.java:669)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.buildResourceMetadata(CommonAnnotationBeanPostProcessor.java:366)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.findResourceMetadata(CommonAnnotationBeanPostProcessor.java:347)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessMergedBeanDefinition(CommonAnnotationBeanPostProcessor.java:295)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyMergedBeanDefinitionPostProcessors(AbstractAutowireCapableBeanFactory.java:1100)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:583)
+	... 19 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: Lcom/xuwen/wiki/service/EbookService;
+	at java.lang.Class.getDeclaredFields0(Native Method)
+	at java.lang.Class.privateGetDeclaredFields(Class.java:2583)
+	at java.lang.Class.getDeclaredFields(Class.java:1916)
+	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:732)
+	... 25 common frames omitted
+Caused by: java.lang.ClassNotFoundException: com.xuwen.wiki.service.EbookService
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:144)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 29 common frames omitted
+2021-08-18 19:25:30.317 INFO  com.xuwen.wiki.config.WikiApplication             :55   [32m                  [0;39m Starting WikiApplication using Java 1.8.0_212 on wen2015mbp.lan with PID 15889 (/Users/xuwen/Desktop/springboot/wiki-springboot-vue3/target/classes started by xuwen in /Users/xuwen/Desktop/springboot/wiki-springboot-vue3)
+2021-08-18 19:25:30.317 INFO  com.xuwen.wiki.config.WikiApplication             :660  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2021-08-18 19:25:30.534 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8880 (http)
+2021-08-18 19:25:30.535 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8880"]
+2021-08-18 19:25:30.535 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2021-08-18 19:25:30.535 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.39]
+2021-08-18 19:25:30.541 INFO  o.a.c.c.ContainerBase.[Tomcat-1].[localhost].[/]  :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2021-08-18 19:25:30.541 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :289  [32m                  [0;39m Root WebApplicationContext: initialization completed in 221 ms
+2021-08-18 19:25:30.740 INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor  :181  [32m                  [0;39m Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-18 19:25:30.909 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2021-08-18 19:25:30.920 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8880"]
+2021-08-18 19:25:30.921 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8880 (http) with context path ''
+2021-08-18 19:25:30.925 INFO  com.xuwen.wiki.config.WikiApplication             :61   [32m                  [0;39m Started WikiApplication in 0.639 seconds (JVM running for 299.639)
+2021-08-18 19:25:30.926 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2021-08-18 19:25:30.927 INFO  com.xuwen.wiki.config.WikiApplication             :23   [32m                  [0;39m 启动成功！！！success
+2021-08-18 19:25:30.927 INFO  com.xuwen.wiki.config.WikiApplication             :24   [32m                  [0;39m 地址：	http://127.0.0.1:8880
+2021-08-18 19:25:47.716 INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor  :218  [32m                  [0;39m Shutting down ExecutorService 'applicationTaskExecutor'
+2021-08-18 19:25:47.887 INFO  com.xuwen.wiki.config.WikiApplication             :55   [32m                  [0;39m Starting WikiApplication using Java 1.8.0_212 on wen2015mbp.lan with PID 15889 (/Users/xuwen/Desktop/springboot/wiki-springboot-vue3/target/classes started by xuwen in /Users/xuwen/Desktop/springboot/wiki-springboot-vue3)
+2021-08-18 19:25:47.887 INFO  com.xuwen.wiki.config.WikiApplication             :660  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2021-08-18 19:25:48.058 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8880 (http)
+2021-08-18 19:25:48.059 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8880"]
+2021-08-18 19:25:48.059 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2021-08-18 19:25:48.059 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.39]
+2021-08-18 19:25:48.065 INFO  o.a.c.c.ContainerBase.[Tomcat-1].[localhost].[/]  :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2021-08-18 19:25:48.066 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :289  [32m                  [0;39m Root WebApplicationContext: initialization completed in 177 ms
+2021-08-18 19:25:48.226 INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor  :181  [32m                  [0;39m Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-18 19:25:48.357 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2021-08-18 19:25:48.366 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8880"]
+2021-08-18 19:25:48.368 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8880 (http) with context path ''
+2021-08-18 19:25:48.371 INFO  com.xuwen.wiki.config.WikiApplication             :61   [32m                  [0;39m Started WikiApplication in 0.512 seconds (JVM running for 317.085)
+2021-08-18 19:25:48.373 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2021-08-18 19:25:48.373 INFO  com.xuwen.wiki.config.WikiApplication             :23   [32m                  [0;39m 启动成功！！！success
+2021-08-18 19:25:48.373 INFO  com.xuwen.wiki.config.WikiApplication             :24   [32m                  [0;39m 地址：	http://127.0.0.1:8880
+2021-08-18 19:32:24.447 INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor  :218  [32m                  [0;39m Shutting down ExecutorService 'applicationTaskExecutor'
+2021-08-18 19:32:24.587 INFO  com.xuwen.wiki.config.WikiApplication             :55   [32m                  [0;39m Starting WikiApplication using Java 1.8.0_212 on wen2015mbp.lan with PID 15889 (/Users/xuwen/Desktop/springboot/wiki-springboot-vue3/target/classes started by xuwen in /Users/xuwen/Desktop/springboot/wiki-springboot-vue3)
+2021-08-18 19:32:24.587 INFO  com.xuwen.wiki.config.WikiApplication             :660  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2021-08-18 19:32:24.775 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8880 (http)
+2021-08-18 19:32:24.775 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8880"]
+2021-08-18 19:32:24.776 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2021-08-18 19:32:24.776 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.39]
+2021-08-18 19:32:24.782 INFO  o.a.c.c.ContainerBase.[Tomcat-1].[localhost].[/]  :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2021-08-18 19:32:24.783 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :289  [32m                  [0;39m Root WebApplicationContext: initialization completed in 193 ms
+2021-08-18 19:32:24.950 INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor  :181  [32m                  [0;39m Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-18 19:32:25.086 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2021-08-18 19:32:25.095 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8880"]
+2021-08-18 19:32:25.097 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8880 (http) with context path ''
+2021-08-18 19:32:25.100 INFO  com.xuwen.wiki.config.WikiApplication             :61   [32m                  [0;39m Started WikiApplication in 0.54 seconds (JVM running for 713.824)
+2021-08-18 19:32:25.101 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2021-08-18 19:32:25.102 INFO  com.xuwen.wiki.config.WikiApplication             :23   [32m                  [0;39m 启动成功！！！success
+2021-08-18 19:32:25.102 INFO  com.xuwen.wiki.config.WikiApplication             :24   [32m                  [0;39m 地址：	http://127.0.0.1:8880
+2021-08-18 19:33:21.382 INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor  :218  [32m                  [0;39m Shutting down ExecutorService 'applicationTaskExecutor'
+2021-08-18 19:33:21.487 INFO  com.xuwen.wiki.config.WikiApplication             :55   [32m                  [0;39m Starting WikiApplication using Java 1.8.0_212 on wen2015mbp.lan with PID 15889 (/Users/xuwen/Desktop/springboot/wiki-springboot-vue3/target/classes started by xuwen in /Users/xuwen/Desktop/springboot/wiki-springboot-vue3)
+2021-08-18 19:33:21.487 INFO  com.xuwen.wiki.config.WikiApplication             :660  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2021-08-18 19:33:21.669 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8880 (http)
+2021-08-18 19:33:21.669 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8880"]
+2021-08-18 19:33:21.670 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2021-08-18 19:33:21.670 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.39]
+2021-08-18 19:33:21.675 INFO  o.a.c.c.ContainerBase.[Tomcat-1].[localhost].[/]  :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2021-08-18 19:33:21.676 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :289  [32m                  [0;39m Root WebApplicationContext: initialization completed in 187 ms
+2021-08-18 19:33:21.842 INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor  :181  [32m                  [0;39m Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-18 19:33:21.971 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2021-08-18 19:33:21.980 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8880"]
+2021-08-18 19:33:21.982 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8880 (http) with context path ''
+2021-08-18 19:33:21.985 INFO  com.xuwen.wiki.config.WikiApplication             :61   [32m                  [0;39m Started WikiApplication in 0.523 seconds (JVM running for 770.71)
+2021-08-18 19:33:21.986 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2021-08-18 19:33:21.987 INFO  com.xuwen.wiki.config.WikiApplication             :23   [32m                  [0;39m 启动成功！！！success
+2021-08-18 19:33:21.987 INFO  com.xuwen.wiki.config.WikiApplication             :24   [32m                  [0;39m 地址：	http://127.0.0.1:8880
+2021-08-18 19:33:38.160 INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor  :218  [32m                  [0;39m Shutting down ExecutorService 'applicationTaskExecutor'
+2021-08-18 19:33:38.265 INFO  com.xuwen.wiki.config.WikiApplication             :55   [32m                  [0;39m Starting WikiApplication using Java 1.8.0_212 on wen2015mbp.lan with PID 15889 (/Users/xuwen/Desktop/springboot/wiki-springboot-vue3/target/classes started by xuwen in /Users/xuwen/Desktop/springboot/wiki-springboot-vue3)
+2021-08-18 19:33:38.265 INFO  com.xuwen.wiki.config.WikiApplication             :660  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2021-08-18 19:33:38.447 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8880 (http)
+2021-08-18 19:33:38.448 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8880"]
+2021-08-18 19:33:38.448 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2021-08-18 19:33:38.448 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.39]
+2021-08-18 19:33:38.454 INFO  o.a.c.c.ContainerBase.[Tomcat-1].[localhost].[/]  :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2021-08-18 19:33:38.454 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :289  [32m                  [0;39m Root WebApplicationContext: initialization completed in 187 ms
+2021-08-18 19:33:38.634 INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor  :181  [32m                  [0;39m Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-18 19:33:38.761 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2021-08-18 19:33:38.770 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8880"]
+2021-08-18 19:33:38.772 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8880 (http) with context path ''
+2021-08-18 19:33:38.775 INFO  com.xuwen.wiki.config.WikiApplication             :61   [32m                  [0;39m Started WikiApplication in 0.537 seconds (JVM running for 787.501)
+2021-08-18 19:33:38.776 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2021-08-18 19:33:38.777 INFO  com.xuwen.wiki.config.WikiApplication             :23   [32m                  [0;39m 启动成功！！！success
+2021-08-18 19:33:38.777 INFO  com.xuwen.wiki.config.WikiApplication             :24   [32m                  [0;39m 地址：	http://127.0.0.1:8880
+2021-08-18 19:33:48.882 INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor  :218  [32m                  [0;39m Shutting down ExecutorService 'applicationTaskExecutor'
+2021-08-18 19:33:48.981 INFO  com.xuwen.wiki.config.WikiApplication             :55   [32m                  [0;39m Starting WikiApplication using Java 1.8.0_212 on wen2015mbp.lan with PID 15889 (/Users/xuwen/Desktop/springboot/wiki-springboot-vue3/target/classes started by xuwen in /Users/xuwen/Desktop/springboot/wiki-springboot-vue3)
+2021-08-18 19:33:48.982 INFO  com.xuwen.wiki.config.WikiApplication             :660  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2021-08-18 19:33:49.168 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8880 (http)
+2021-08-18 19:33:49.169 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8880"]
+2021-08-18 19:33:49.170 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2021-08-18 19:33:49.170 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.39]
+2021-08-18 19:33:49.176 INFO  o.a.c.c.ContainerBase.[Tomcat-1].[localhost].[/]  :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2021-08-18 19:33:49.176 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :289  [32m                  [0;39m Root WebApplicationContext: initialization completed in 193 ms
+2021-08-18 19:33:49.358 INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor  :181  [32m                  [0;39m Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-18 19:33:49.500 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2021-08-18 19:33:49.511 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8880"]
+2021-08-18 19:33:49.513 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8880 (http) with context path ''
+2021-08-18 19:33:49.516 INFO  com.xuwen.wiki.config.WikiApplication             :61   [32m                  [0;39m Started WikiApplication in 0.559 seconds (JVM running for 798.242)
+2021-08-18 19:33:49.517 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m                  [0;39m Condition evaluation unchanged
+2021-08-18 19:33:49.518 INFO  com.xuwen.wiki.config.WikiApplication             :23   [32m                  [0;39m 启动成功！！！success
+2021-08-18 19:33:49.518 INFO  com.xuwen.wiki.config.WikiApplication             :24   [32m                  [0;39m 地址：	http://127.0.0.1:8880
+2021-08-18 19:34:12.908 INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor  :218  [32m                  [0;39m Shutting down ExecutorService 'applicationTaskExecutor'
+2021-08-18 19:35:38.560 INFO  com.xuwen.wiki.config.WikiApplication             :55   [32m                  [0;39m Starting WikiApplication using Java 1.8.0_212 on wen2015mbp.lan with PID 16131 (/Users/xuwen/Desktop/springboot/wiki-springboot-vue3/target/classes started by xuwen in /Users/xuwen/Desktop/springboot/wiki-springboot-vue3)
+2021-08-18 19:35:38.563 INFO  com.xuwen.wiki.config.WikiApplication             :660  [32m                  [0;39m No active profile set, falling back to default profiles: default
+2021-08-18 19:35:38.607 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-08-18 19:35:38.607 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :255  [32m                  [0;39m For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-08-18 19:35:39.738 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m                  [0;39m Tomcat initialized with port(s): 8880 (http)
+2021-08-18 19:35:39.747 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Initializing ProtocolHandler ["http-nio-8880"]
+2021-08-18 19:35:39.748 INFO  org.apache.catalina.core.StandardService          :173  [32m                  [0;39m Starting service [Tomcat]
+2021-08-18 19:35:39.748 INFO  org.apache.catalina.core.StandardEngine           :173  [32m                  [0;39m Starting Servlet engine: [Apache Tomcat/9.0.39]
+2021-08-18 19:35:39.811 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring embedded WebApplicationContext
+2021-08-18 19:35:39.811 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :289  [32m                  [0;39m Root WebApplicationContext: initialization completed in 1203 ms
+2021-08-18 19:35:40.515 INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor  :181  [32m                  [0;39m Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-18 19:35:40.815 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m                  [0;39m LiveReload server is running on port 35729
+2021-08-18 19:35:40.835 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m                  [0;39m Starting ProtocolHandler ["http-nio-8880"]
+2021-08-18 19:35:40.863 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m                  [0;39m Tomcat started on port(s): 8880 (http) with context path ''
+2021-08-18 19:35:40.875 INFO  com.xuwen.wiki.config.WikiApplication             :61   [32m                  [0;39m Started WikiApplication in 2.687 seconds (JVM running for 3.197)
+2021-08-18 19:35:40.879 INFO  com.xuwen.wiki.config.WikiApplication             :23   [32m                  [0;39m 启动成功！！！success
+2021-08-18 19:35:40.879 INFO  com.xuwen.wiki.config.WikiApplication             :24   [32m                  [0;39m 地址：	http://127.0.0.1:8880
+2021-08-18 19:35:45.736 INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] :173  [32m                  [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-08-18 19:35:45.736 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m                  [0;39m Initializing Servlet 'dispatcherServlet'
+2021-08-18 19:35:45.737 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m                  [0;39m Completed initialization in 1 ms
+2021-08-18 19:35:45.763 INFO  com.xuwen.wiki.aspect.LogAspect                   :53   [32m                  [0;39m ------------- 开始 -------------
+2021-08-18 19:35:45.764 INFO  com.xuwen.wiki.aspect.LogAspect                   :54   [32m                  [0;39m 请求地址: http://localhost:8880/ebook/list GET
+2021-08-18 19:35:45.764 INFO  com.xuwen.wiki.aspect.LogAspect                   :55   [32m                  [0;39m 类名方法: com.xuwen.wiki.controller.EbookController.list
+2021-08-18 19:35:45.764 INFO  com.xuwen.wiki.aspect.LogAspect                   :56   [32m                  [0;39m 远程地址: 127.0.0.1
+2021-08-18 19:35:45.809 INFO  com.xuwen.wiki.aspect.LogAspect                   :78   [32m                  [0;39m 请求参数: [{"page":0,"size":0}]
+2021-08-18 19:35:45.841 INFO  com.zaxxer.hikari.HikariDataSource                :110  [32m                  [0;39m HikariPool-1 - Starting...
+2021-08-18 19:35:46.041 INFO  com.zaxxer.hikari.HikariDataSource                :123  [32m                  [0;39m HikariPool-1 - Start completed.
+2021-08-18 19:35:46.075 DEBUG c.x.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM ebook
+2021-08-18 19:35:46.096 DEBUG c.x.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m ==> Parameters: 
+2021-08-18 19:35:46.119 TRACE c.x.wiki.mapper.EbookMapper.selectByExample_COUNT :143  [32m                  [0;39m <==    Columns: count(0)
+2021-08-18 19:35:46.119 TRACE c.x.wiki.mapper.EbookMapper.selectByExample_COUNT :143  [32m                  [0;39m <==        Row: 5
+2021-08-18 19:35:46.121 DEBUG c.x.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m <==      Total: 1
+2021-08-18 19:35:46.122 DEBUG com.xuwen.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m ==>  Preparing: select id, `name`, category1_id, category2_id, description, cover, doc_count, view_count, vote_count from ebook
+2021-08-18 19:35:46.122 DEBUG com.xuwen.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m ==> Parameters: 
+2021-08-18 19:35:46.130 TRACE com.xuwen.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==    Columns: id, name, category1_id, category2_id, description, cover, doc_count, view_count, vote_count
+2021-08-18 19:35:46.130 TRACE com.xuwen.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 1, Spring Boot 入门教程, null, null, 零基础入门 Java 开发，企业级应用开发最佳首选框架, /image/cover2.png, 0, 0, 0
+2021-08-18 19:35:46.131 TRACE com.xuwen.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 2, Vue 入门教程, null, null, 零基础入门 Vue 开发，企业级应用开发最佳首选框架, /image/cover2.png, 0, 0, 0
+2021-08-18 19:35:46.132 TRACE com.xuwen.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 3, Python 入门教程, null, null, 零基础入门 Python 开发，企业级应用开发最佳首选框架, null, 0, 0, 0
+2021-08-18 19:35:46.133 TRACE com.xuwen.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 4, Mysql 入门教程, null, null, 零基础入门 Mysql 开发，企业级应用开发最佳首选框架, null, 0, 0, 0
+2021-08-18 19:35:46.133 TRACE com.xuwen.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 5, Oracle 入门教程, null, null, 零基础入门 Oracle 开发，企业级应用开发最佳首选框架, null, 0, 0, 0
+2021-08-18 19:35:46.134 DEBUG com.xuwen.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m <==      Total: 5
+2021-08-18 19:35:46.136 INFO  com.xuwen.wiki.service.EbookService               :43   [32m                  [0;39m 总行数：5
+2021-08-18 19:35:46.136 INFO  com.xuwen.wiki.service.EbookService               :44   [32m                  [0;39m 总页数：0
+2021-08-18 19:35:46.152 INFO  com.xuwen.wiki.aspect.LogAspect                   :90   [32m                  [0;39m 返回结果: {"content":{"list":[{"cover":"/image/cover2.png","description":"零基础入门 Java 开发，企业级应用开发最佳首选框架","docCount":0,"id":1,"name":"Spring Boot 入门教程","viewCount":0,"voteCount":0},{"cover":"/image/cover2.png","description":"零基础入门 Vue 开发，企业级应用开发最佳首选框架","docCount":0,"id":2,"name":"Vue 入门教程","viewCount":0,"voteCount":0},{"description":"零基础入门 Python 开发，企业级应用开发最佳首选框架","docCount":0,"id":3,"name":"Python 入门教程","viewCount":0,"voteCount":0},{"description":"零基础入门 Mysql 开发，企业级应用开发最佳首选框架","docCount":0,"id":4,"name":"Mysql 入门教程","viewCount":0,"voteCount":0},{"description":"零基础入门 Oracle 开发，企业级应用开发最佳首选框架","docCount":0,"id":5,"name":"Oracle 入门教程","viewCount":0,"voteCount":0}],"total":5},"success":true}
+2021-08-18 19:35:46.152 INFO  com.xuwen.wiki.aspect.LogAspect                   :91   [32m                  [0;39m ------------- 结束 耗时：390 ms -------------
+2021-08-18 19:36:08.102 INFO  com.xuwen.wiki.aspect.LogAspect                   :53   [32m                  [0;39m ------------- 开始 -------------
+2021-08-18 19:36:08.103 INFO  com.xuwen.wiki.aspect.LogAspect                   :54   [32m                  [0;39m 请求地址: http://127.0.0.1:8880/ebook/list GET
+2021-08-18 19:36:08.103 INFO  com.xuwen.wiki.aspect.LogAspect                   :55   [32m                  [0;39m 类名方法: com.xuwen.wiki.controller.EbookController.list
+2021-08-18 19:36:08.104 INFO  com.xuwen.wiki.aspect.LogAspect                   :56   [32m                  [0;39m 远程地址: 127.0.0.1
+2021-08-18 19:36:08.104 INFO  com.xuwen.wiki.aspect.LogAspect                   :78   [32m                  [0;39m 请求参数: [{"page":0,"size":0}]
+2021-08-18 19:36:08.113 DEBUG c.x.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM ebook
+2021-08-18 19:36:08.114 DEBUG c.x.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m ==> Parameters: 
+2021-08-18 19:36:08.122 TRACE c.x.wiki.mapper.EbookMapper.selectByExample_COUNT :143  [32m                  [0;39m <==    Columns: count(0)
+2021-08-18 19:36:08.122 TRACE c.x.wiki.mapper.EbookMapper.selectByExample_COUNT :143  [32m                  [0;39m <==        Row: 5
+2021-08-18 19:36:08.123 DEBUG c.x.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m <==      Total: 1
+2021-08-18 19:36:08.123 DEBUG com.xuwen.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m ==>  Preparing: select id, `name`, category1_id, category2_id, description, cover, doc_count, view_count, vote_count from ebook
+2021-08-18 19:36:08.123 DEBUG com.xuwen.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m ==> Parameters: 
+2021-08-18 19:36:08.131 TRACE com.xuwen.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==    Columns: id, name, category1_id, category2_id, description, cover, doc_count, view_count, vote_count
+2021-08-18 19:36:08.132 TRACE com.xuwen.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 1, Spring Boot 入门教程, null, null, 零基础入门 Java 开发，企业级应用开发最佳首选框架, /image/cover2.png, 0, 0, 0
+2021-08-18 19:36:08.135 TRACE com.xuwen.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 2, Vue 入门教程, null, null, 零基础入门 Vue 开发，企业级应用开发最佳首选框架, /image/cover2.png, 0, 0, 0
+2021-08-18 19:36:08.135 TRACE com.xuwen.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 3, Python 入门教程, null, null, 零基础入门 Python 开发，企业级应用开发最佳首选框架, null, 0, 0, 0
+2021-08-18 19:36:08.136 TRACE com.xuwen.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 4, Mysql 入门教程, null, null, 零基础入门 Mysql 开发，企业级应用开发最佳首选框架, null, 0, 0, 0
+2021-08-18 19:36:08.137 TRACE com.xuwen.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 5, Oracle 入门教程, null, null, 零基础入门 Oracle 开发，企业级应用开发最佳首选框架, null, 0, 0, 0
+2021-08-18 19:36:08.138 DEBUG com.xuwen.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m <==      Total: 5
+2021-08-18 19:36:08.138 INFO  com.xuwen.wiki.service.EbookService               :43   [32m                  [0;39m 总行数：5
+2021-08-18 19:36:08.139 INFO  com.xuwen.wiki.service.EbookService               :44   [32m                  [0;39m 总页数：0
+2021-08-18 19:36:08.140 INFO  com.xuwen.wiki.aspect.LogAspect                   :90   [32m                  [0;39m 返回结果: {"content":{"list":[{"cover":"/image/cover2.png","description":"零基础入门 Java 开发，企业级应用开发最佳首选框架","docCount":0,"id":1,"name":"Spring Boot 入门教程","viewCount":0,"voteCount":0},{"cover":"/image/cover2.png","description":"零基础入门 Vue 开发，企业级应用开发最佳首选框架","docCount":0,"id":2,"name":"Vue 入门教程","viewCount":0,"voteCount":0},{"description":"零基础入门 Python 开发，企业级应用开发最佳首选框架","docCount":0,"id":3,"name":"Python 入门教程","viewCount":0,"voteCount":0},{"description":"零基础入门 Mysql 开发，企业级应用开发最佳首选框架","docCount":0,"id":4,"name":"Mysql 入门教程","viewCount":0,"voteCount":0},{"description":"零基础入门 Oracle 开发，企业级应用开发最佳首选框架","docCount":0,"id":5,"name":"Oracle 入门教程","viewCount":0,"voteCount":0}],"total":5},"success":true}
+2021-08-18 19:36:08.140 INFO  com.xuwen.wiki.aspect.LogAspect                   :91   [32m                  [0;39m ------------- 结束 耗时：38 ms -------------
+2021-08-18 19:37:57.466 INFO  com.xuwen.wiki.aspect.LogAspect                   :53   [32m                  [0;39m ------------- 开始 -------------
+2021-08-18 19:37:57.466 INFO  com.xuwen.wiki.aspect.LogAspect                   :54   [32m                  [0;39m 请求地址: http://127.0.0.1:8880/ebook/list GET
+2021-08-18 19:37:57.467 INFO  com.xuwen.wiki.aspect.LogAspect                   :55   [32m                  [0;39m 类名方法: com.xuwen.wiki.controller.EbookController.list
+2021-08-18 19:37:57.467 INFO  com.xuwen.wiki.aspect.LogAspect                   :56   [32m                  [0;39m 远程地址: 127.0.0.1
+2021-08-18 19:37:57.468 INFO  com.xuwen.wiki.aspect.LogAspect                   :78   [32m                  [0;39m 请求参数: [{"page":0,"size":0}]
+2021-08-18 19:37:57.478 DEBUG c.x.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM ebook
+2021-08-18 19:37:57.479 DEBUG c.x.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m ==> Parameters: 
+2021-08-18 19:37:57.486 TRACE c.x.wiki.mapper.EbookMapper.selectByExample_COUNT :143  [32m                  [0;39m <==    Columns: count(0)
+2021-08-18 19:37:57.486 TRACE c.x.wiki.mapper.EbookMapper.selectByExample_COUNT :143  [32m                  [0;39m <==        Row: 5
+2021-08-18 19:37:57.487 DEBUG c.x.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m <==      Total: 1
+2021-08-18 19:37:57.487 DEBUG com.xuwen.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m ==>  Preparing: select id, `name`, category1_id, category2_id, description, cover, doc_count, view_count, vote_count from ebook
+2021-08-18 19:37:57.488 DEBUG com.xuwen.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m ==> Parameters: 
+2021-08-18 19:37:57.496 TRACE com.xuwen.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==    Columns: id, name, category1_id, category2_id, description, cover, doc_count, view_count, vote_count
+2021-08-18 19:37:57.496 TRACE com.xuwen.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 1, Spring Boot 入门教程, null, null, 零基础入门 Java 开发，企业级应用开发最佳首选框架, /image/cover2.png, 0, 0, 0
+2021-08-18 19:37:57.497 TRACE com.xuwen.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 2, Vue 入门教程, null, null, 零基础入门 Vue 开发，企业级应用开发最佳首选框架, /image/cover2.png, 0, 0, 0
+2021-08-18 19:37:57.498 TRACE com.xuwen.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 3, Python 入门教程, null, null, 零基础入门 Python 开发，企业级应用开发最佳首选框架, null, 0, 0, 0
+2021-08-18 19:37:57.499 TRACE com.xuwen.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 4, Mysql 入门教程, null, null, 零基础入门 Mysql 开发，企业级应用开发最佳首选框架, null, 0, 0, 0
+2021-08-18 19:37:57.499 TRACE com.xuwen.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 5, Oracle 入门教程, null, null, 零基础入门 Oracle 开发，企业级应用开发最佳首选框架, null, 0, 0, 0
+2021-08-18 19:37:57.500 DEBUG com.xuwen.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m <==      Total: 5
+2021-08-18 19:37:57.500 INFO  com.xuwen.wiki.service.EbookService               :43   [32m                  [0;39m 总行数：5
+2021-08-18 19:37:57.500 INFO  com.xuwen.wiki.service.EbookService               :44   [32m                  [0;39m 总页数：0
+2021-08-18 19:37:57.501 INFO  com.xuwen.wiki.aspect.LogAspect                   :90   [32m                  [0;39m 返回结果: {"content":{"list":[{"cover":"/image/cover2.png","description":"零基础入门 Java 开发，企业级应用开发最佳首选框架","docCount":0,"id":1,"name":"Spring Boot 入门教程","viewCount":0,"voteCount":0},{"cover":"/image/cover2.png","description":"零基础入门 Vue 开发，企业级应用开发最佳首选框架","docCount":0,"id":2,"name":"Vue 入门教程","viewCount":0,"voteCount":0},{"description":"零基础入门 Python 开发，企业级应用开发最佳首选框架","docCount":0,"id":3,"name":"Python 入门教程","viewCount":0,"voteCount":0},{"description":"零基础入门 Mysql 开发，企业级应用开发最佳首选框架","docCount":0,"id":4,"name":"Mysql 入门教程","viewCount":0,"voteCount":0},{"description":"零基础入门 Oracle 开发，企业级应用开发最佳首选框架","docCount":0,"id":5,"name":"Oracle 入门教程","viewCount":0,"voteCount":0}],"total":5},"success":true}
+2021-08-18 19:37:57.501 INFO  com.xuwen.wiki.aspect.LogAspect                   :91   [32m                  [0;39m ------------- 结束 耗时：35 ms -------------
+2021-08-18 19:38:19.705 INFO  com.xuwen.wiki.aspect.LogAspect                   :53   [32m                  [0;39m ------------- 开始 -------------
+2021-08-18 19:38:19.705 INFO  com.xuwen.wiki.aspect.LogAspect                   :54   [32m                  [0;39m 请求地址: http://127.0.0.1:8880/ebook/list GET
+2021-08-18 19:38:19.705 INFO  com.xuwen.wiki.aspect.LogAspect                   :55   [32m                  [0;39m 类名方法: com.xuwen.wiki.controller.EbookController.list
+2021-08-18 19:38:19.705 INFO  com.xuwen.wiki.aspect.LogAspect                   :56   [32m                  [0;39m 远程地址: 127.0.0.1
+2021-08-18 19:38:19.706 INFO  com.xuwen.wiki.aspect.LogAspect                   :78   [32m                  [0;39m 请求参数: [{"page":0,"size":0}]
+2021-08-18 19:38:19.715 DEBUG c.x.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM ebook
+2021-08-18 19:38:19.716 DEBUG c.x.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m ==> Parameters: 
+2021-08-18 19:38:19.722 TRACE c.x.wiki.mapper.EbookMapper.selectByExample_COUNT :143  [32m                  [0;39m <==    Columns: count(0)
+2021-08-18 19:38:19.723 TRACE c.x.wiki.mapper.EbookMapper.selectByExample_COUNT :143  [32m                  [0;39m <==        Row: 5
+2021-08-18 19:38:19.724 DEBUG c.x.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m <==      Total: 1
+2021-08-18 19:38:19.724 DEBUG com.xuwen.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m ==>  Preparing: select id, `name`, category1_id, category2_id, description, cover, doc_count, view_count, vote_count from ebook
+2021-08-18 19:38:19.725 DEBUG com.xuwen.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m ==> Parameters: 
+2021-08-18 19:38:19.732 TRACE com.xuwen.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==    Columns: id, name, category1_id, category2_id, description, cover, doc_count, view_count, vote_count
+2021-08-18 19:38:19.732 TRACE com.xuwen.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 1, Spring Boot 入门教程, null, null, 零基础入门 Java 开发，企业级应用开发最佳首选框架, /image/cover2.png, 0, 0, 0
+2021-08-18 19:38:19.734 TRACE com.xuwen.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 2, Vue 入门教程, null, null, 零基础入门 Vue 开发，企业级应用开发最佳首选框架, /image/cover2.png, 0, 0, 0
+2021-08-18 19:38:19.734 TRACE com.xuwen.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 3, Python 入门教程, null, null, 零基础入门 Python 开发，企业级应用开发最佳首选框架, null, 0, 0, 0
+2021-08-18 19:38:19.735 TRACE com.xuwen.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 4, Mysql 入门教程, null, null, 零基础入门 Mysql 开发，企业级应用开发最佳首选框架, null, 0, 0, 0
+2021-08-18 19:38:19.735 TRACE com.xuwen.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 5, Oracle 入门教程, null, null, 零基础入门 Oracle 开发，企业级应用开发最佳首选框架, null, 0, 0, 0
+2021-08-18 19:38:19.736 DEBUG com.xuwen.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m <==      Total: 5
+2021-08-18 19:38:19.736 INFO  com.xuwen.wiki.service.EbookService               :43   [32m                  [0;39m 总行数：5
+2021-08-18 19:38:19.736 INFO  com.xuwen.wiki.service.EbookService               :44   [32m                  [0;39m 总页数：0
+2021-08-18 19:38:19.739 INFO  com.xuwen.wiki.aspect.LogAspect                   :90   [32m                  [0;39m 返回结果: {"content":{"list":[{"cover":"/image/cover2.png","description":"零基础入门 Java 开发，企业级应用开发最佳首选框架","docCount":0,"id":1,"name":"Spring Boot 入门教程","viewCount":0,"voteCount":0},{"cover":"/image/cover2.png","description":"零基础入门 Vue 开发，企业级应用开发最佳首选框架","docCount":0,"id":2,"name":"Vue 入门教程","viewCount":0,"voteCount":0},{"description":"零基础入门 Python 开发，企业级应用开发最佳首选框架","docCount":0,"id":3,"name":"Python 入门教程","viewCount":0,"voteCount":0},{"description":"零基础入门 Mysql 开发，企业级应用开发最佳首选框架","docCount":0,"id":4,"name":"Mysql 入门教程","viewCount":0,"voteCount":0},{"description":"零基础入门 Oracle 开发，企业级应用开发最佳首选框架","docCount":0,"id":5,"name":"Oracle 入门教程","viewCount":0,"voteCount":0}],"total":5},"success":true}
+2021-08-18 19:38:19.739 INFO  com.xuwen.wiki.aspect.LogAspect                   :91   [32m                  [0;39m ------------- 结束 耗时：34 ms -------------
+2021-08-18 19:38:42.672 INFO  com.xuwen.wiki.aspect.LogAspect                   :53   [32m                  [0;39m ------------- 开始 -------------
+2021-08-18 19:38:42.673 INFO  com.xuwen.wiki.aspect.LogAspect                   :54   [32m                  [0;39m 请求地址: http://127.0.0.1:8880/ebook/list GET
+2021-08-18 19:38:42.673 INFO  com.xuwen.wiki.aspect.LogAspect                   :55   [32m                  [0;39m 类名方法: com.xuwen.wiki.controller.EbookController.list
+2021-08-18 19:38:42.674 INFO  com.xuwen.wiki.aspect.LogAspect                   :56   [32m                  [0;39m 远程地址: 127.0.0.1
+2021-08-18 19:38:42.674 INFO  com.xuwen.wiki.aspect.LogAspect                   :78   [32m                  [0;39m 请求参数: [{"page":0,"size":0}]
+2021-08-18 19:38:42.685 DEBUG c.x.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM ebook
+2021-08-18 19:38:42.686 DEBUG c.x.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m ==> Parameters: 
+2021-08-18 19:38:42.693 TRACE c.x.wiki.mapper.EbookMapper.selectByExample_COUNT :143  [32m                  [0;39m <==    Columns: count(0)
+2021-08-18 19:38:42.694 TRACE c.x.wiki.mapper.EbookMapper.selectByExample_COUNT :143  [32m                  [0;39m <==        Row: 5
+2021-08-18 19:38:42.695 DEBUG c.x.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m <==      Total: 1
+2021-08-18 19:38:42.696 DEBUG com.xuwen.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m ==>  Preparing: select id, `name`, category1_id, category2_id, description, cover, doc_count, view_count, vote_count from ebook
+2021-08-18 19:38:42.696 DEBUG com.xuwen.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m ==> Parameters: 
+2021-08-18 19:38:42.705 TRACE com.xuwen.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==    Columns: id, name, category1_id, category2_id, description, cover, doc_count, view_count, vote_count
+2021-08-18 19:38:42.705 TRACE com.xuwen.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 1, Spring Boot 入门教程, null, null, 零基础入门 Java 开发，企业级应用开发最佳首选框架, /image/cover2.png, 0, 0, 0
+2021-08-18 19:38:42.706 TRACE com.xuwen.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 2, Vue 入门教程, null, null, 零基础入门 Vue 开发，企业级应用开发最佳首选框架, /image/cover2.png, 0, 0, 0
+2021-08-18 19:38:42.707 TRACE com.xuwen.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 3, Python 入门教程, null, null, 零基础入门 Python 开发，企业级应用开发最佳首选框架, null, 0, 0, 0
+2021-08-18 19:38:42.708 TRACE com.xuwen.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 4, Mysql 入门教程, null, null, 零基础入门 Mysql 开发，企业级应用开发最佳首选框架, null, 0, 0, 0
+2021-08-18 19:38:42.708 TRACE com.xuwen.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 5, Oracle 入门教程, null, null, 零基础入门 Oracle 开发，企业级应用开发最佳首选框架, null, 0, 0, 0
+2021-08-18 19:38:42.709 DEBUG com.xuwen.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m <==      Total: 5
+2021-08-18 19:38:42.709 INFO  com.xuwen.wiki.service.EbookService               :43   [32m                  [0;39m 总行数：5
+2021-08-18 19:38:42.710 INFO  com.xuwen.wiki.service.EbookService               :44   [32m                  [0;39m 总页数：0
+2021-08-18 19:38:42.710 INFO  com.xuwen.wiki.aspect.LogAspect                   :90   [32m                  [0;39m 返回结果: {"content":{"list":[{"cover":"/image/cover2.png","description":"零基础入门 Java 开发，企业级应用开发最佳首选框架","docCount":0,"id":1,"name":"Spring Boot 入门教程","viewCount":0,"voteCount":0},{"cover":"/image/cover2.png","description":"零基础入门 Vue 开发，企业级应用开发最佳首选框架","docCount":0,"id":2,"name":"Vue 入门教程","viewCount":0,"voteCount":0},{"description":"零基础入门 Python 开发，企业级应用开发最佳首选框架","docCount":0,"id":3,"name":"Python 入门教程","viewCount":0,"voteCount":0},{"description":"零基础入门 Mysql 开发，企业级应用开发最佳首选框架","docCount":0,"id":4,"name":"Mysql 入门教程","viewCount":0,"voteCount":0},{"description":"零基础入门 Oracle 开发，企业级应用开发最佳首选框架","docCount":0,"id":5,"name":"Oracle 入门教程","viewCount":0,"voteCount":0}],"total":5},"success":true}
+2021-08-18 19:38:42.711 INFO  com.xuwen.wiki.aspect.LogAspect                   :91   [32m                  [0;39m ------------- 结束 耗时：39 ms -------------
+2021-08-18 19:38:53.306 INFO  com.xuwen.wiki.aspect.LogAspect                   :53   [32m                  [0;39m ------------- 开始 -------------
+2021-08-18 19:38:53.307 INFO  com.xuwen.wiki.aspect.LogAspect                   :54   [32m                  [0;39m 请求地址: http://127.0.0.1:8880/ebook/list GET
+2021-08-18 19:38:53.307 INFO  com.xuwen.wiki.aspect.LogAspect                   :55   [32m                  [0;39m 类名方法: com.xuwen.wiki.controller.EbookController.list
+2021-08-18 19:38:53.308 INFO  com.xuwen.wiki.aspect.LogAspect                   :56   [32m                  [0;39m 远程地址: 127.0.0.1
+2021-08-18 19:38:53.308 INFO  com.xuwen.wiki.aspect.LogAspect                   :78   [32m                  [0;39m 请求参数: [{"page":0,"size":0}]
+2021-08-18 19:38:53.320 DEBUG c.x.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM ebook
+2021-08-18 19:38:53.320 DEBUG c.x.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m ==> Parameters: 
+2021-08-18 19:38:53.329 TRACE c.x.wiki.mapper.EbookMapper.selectByExample_COUNT :143  [32m                  [0;39m <==    Columns: count(0)
+2021-08-18 19:38:53.330 TRACE c.x.wiki.mapper.EbookMapper.selectByExample_COUNT :143  [32m                  [0;39m <==        Row: 5
+2021-08-18 19:38:53.330 DEBUG c.x.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m <==      Total: 1
+2021-08-18 19:38:53.331 DEBUG com.xuwen.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m ==>  Preparing: select id, `name`, category1_id, category2_id, description, cover, doc_count, view_count, vote_count from ebook
+2021-08-18 19:38:53.332 DEBUG com.xuwen.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m ==> Parameters: 
+2021-08-18 19:38:53.340 TRACE com.xuwen.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==    Columns: id, name, category1_id, category2_id, description, cover, doc_count, view_count, vote_count
+2021-08-18 19:38:53.341 TRACE com.xuwen.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 1, Spring Boot 入门教程, null, null, 零基础入门 Java 开发，企业级应用开发最佳首选框架, /image/cover2.png, 0, 0, 0
+2021-08-18 19:38:53.342 TRACE com.xuwen.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 2, Vue 入门教程, null, null, 零基础入门 Vue 开发，企业级应用开发最佳首选框架, /image/cover2.png, 0, 0, 0
+2021-08-18 19:38:53.342 TRACE com.xuwen.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 3, Python 入门教程, null, null, 零基础入门 Python 开发，企业级应用开发最佳首选框架, null, 0, 0, 0
+2021-08-18 19:38:53.343 TRACE com.xuwen.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 4, Mysql 入门教程, null, null, 零基础入门 Mysql 开发，企业级应用开发最佳首选框架, null, 0, 0, 0
+2021-08-18 19:38:53.344 TRACE com.xuwen.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 5, Oracle 入门教程, null, null, 零基础入门 Oracle 开发，企业级应用开发最佳首选框架, null, 0, 0, 0
+2021-08-18 19:38:53.344 DEBUG com.xuwen.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m <==      Total: 5
+2021-08-18 19:38:53.345 INFO  com.xuwen.wiki.service.EbookService               :43   [32m                  [0;39m 总行数：5
+2021-08-18 19:38:53.345 INFO  com.xuwen.wiki.service.EbookService               :44   [32m                  [0;39m 总页数：0
+2021-08-18 19:38:53.346 INFO  com.xuwen.wiki.aspect.LogAspect                   :90   [32m                  [0;39m 返回结果: {"content":{"list":[{"cover":"/image/cover2.png","description":"零基础入门 Java 开发，企业级应用开发最佳首选框架","docCount":0,"id":1,"name":"Spring Boot 入门教程","viewCount":0,"voteCount":0},{"cover":"/image/cover2.png","description":"零基础入门 Vue 开发，企业级应用开发最佳首选框架","docCount":0,"id":2,"name":"Vue 入门教程","viewCount":0,"voteCount":0},{"description":"零基础入门 Python 开发，企业级应用开发最佳首选框架","docCount":0,"id":3,"name":"Python 入门教程","viewCount":0,"voteCount":0},{"description":"零基础入门 Mysql 开发，企业级应用开发最佳首选框架","docCount":0,"id":4,"name":"Mysql 入门教程","viewCount":0,"voteCount":0},{"description":"零基础入门 Oracle 开发，企业级应用开发最佳首选框架","docCount":0,"id":5,"name":"Oracle 入门教程","viewCount":0,"voteCount":0}],"total":5},"success":true}
+2021-08-18 19:38:53.346 INFO  com.xuwen.wiki.aspect.LogAspect                   :91   [32m                  [0;39m ------------- 结束 耗时：40 ms -------------
+2021-08-18 19:41:23.123 INFO  com.xuwen.wiki.aspect.LogAspect                   :53   [32m                  [0;39m ------------- 开始 -------------
+2021-08-18 19:41:23.124 INFO  com.xuwen.wiki.aspect.LogAspect                   :54   [32m                  [0;39m 请求地址: http://127.0.0.1:8880/ebook/list GET
+2021-08-18 19:41:23.124 INFO  com.xuwen.wiki.aspect.LogAspect                   :55   [32m                  [0;39m 类名方法: com.xuwen.wiki.controller.EbookController.list
+2021-08-18 19:41:23.125 INFO  com.xuwen.wiki.aspect.LogAspect                   :56   [32m                  [0;39m 远程地址: 127.0.0.1
+2021-08-18 19:41:23.125 INFO  com.xuwen.wiki.aspect.LogAspect                   :78   [32m                  [0;39m 请求参数: [{"page":0,"size":0}]
+2021-08-18 19:41:23.136 DEBUG c.x.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM ebook
+2021-08-18 19:41:23.136 DEBUG c.x.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m ==> Parameters: 
+2021-08-18 19:41:23.143 TRACE c.x.wiki.mapper.EbookMapper.selectByExample_COUNT :143  [32m                  [0;39m <==    Columns: count(0)
+2021-08-18 19:41:23.144 TRACE c.x.wiki.mapper.EbookMapper.selectByExample_COUNT :143  [32m                  [0;39m <==        Row: 5
+2021-08-18 19:41:23.144 DEBUG c.x.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m <==      Total: 1
+2021-08-18 19:41:23.145 DEBUG com.xuwen.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m ==>  Preparing: select id, `name`, category1_id, category2_id, description, cover, doc_count, view_count, vote_count from ebook
+2021-08-18 19:41:23.146 DEBUG com.xuwen.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m ==> Parameters: 
+2021-08-18 19:41:23.154 TRACE com.xuwen.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==    Columns: id, name, category1_id, category2_id, description, cover, doc_count, view_count, vote_count
+2021-08-18 19:41:23.154 TRACE com.xuwen.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 1, Spring Boot 入门教程, null, null, 零基础入门 Java 开发，企业级应用开发最佳首选框架, /image/cover2.png, 0, 0, 0
+2021-08-18 19:41:23.155 TRACE com.xuwen.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 2, Vue 入门教程, null, null, 零基础入门 Vue 开发，企业级应用开发最佳首选框架, /image/cover2.png, 0, 0, 0
+2021-08-18 19:41:23.156 TRACE com.xuwen.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 3, Python 入门教程, null, null, 零基础入门 Python 开发，企业级应用开发最佳首选框架, null, 0, 0, 0
+2021-08-18 19:41:23.156 TRACE com.xuwen.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 4, Mysql 入门教程, null, null, 零基础入门 Mysql 开发，企业级应用开发最佳首选框架, null, 0, 0, 0
+2021-08-18 19:41:23.157 TRACE com.xuwen.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 5, Oracle 入门教程, null, null, 零基础入门 Oracle 开发，企业级应用开发最佳首选框架, null, 0, 0, 0
+2021-08-18 19:41:23.157 DEBUG com.xuwen.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m <==      Total: 5
+2021-08-18 19:41:23.158 INFO  com.xuwen.wiki.service.EbookService               :43   [32m                  [0;39m 总行数：5
+2021-08-18 19:41:23.158 INFO  com.xuwen.wiki.service.EbookService               :44   [32m                  [0;39m 总页数：0
+2021-08-18 19:41:23.158 INFO  com.xuwen.wiki.aspect.LogAspect                   :90   [32m                  [0;39m 返回结果: {"content":{"list":[{"cover":"/image/cover2.png","description":"零基础入门 Java 开发，企业级应用开发最佳首选框架","docCount":0,"id":1,"name":"Spring Boot 入门教程","viewCount":0,"voteCount":0},{"cover":"/image/cover2.png","description":"零基础入门 Vue 开发，企业级应用开发最佳首选框架","docCount":0,"id":2,"name":"Vue 入门教程","viewCount":0,"voteCount":0},{"description":"零基础入门 Python 开发，企业级应用开发最佳首选框架","docCount":0,"id":3,"name":"Python 入门教程","viewCount":0,"voteCount":0},{"description":"零基础入门 Mysql 开发，企业级应用开发最佳首选框架","docCount":0,"id":4,"name":"Mysql 入门教程","viewCount":0,"voteCount":0},{"description":"零基础入门 Oracle 开发，企业级应用开发最佳首选框架","docCount":0,"id":5,"name":"Oracle 入门教程","viewCount":0,"voteCount":0}],"total":5},"success":true}
+2021-08-18 19:41:23.159 INFO  com.xuwen.wiki.aspect.LogAspect                   :91   [32m                  [0;39m ------------- 结束 耗时：36 ms -------------
+2021-08-18 19:41:48.058 INFO  com.xuwen.wiki.aspect.LogAspect                   :53   [32m                  [0;39m ------------- 开始 -------------
+2021-08-18 19:41:48.059 INFO  com.xuwen.wiki.aspect.LogAspect                   :54   [32m                  [0;39m 请求地址: http://127.0.0.1:8880/ebook/list GET
+2021-08-18 19:41:48.059 INFO  com.xuwen.wiki.aspect.LogAspect                   :55   [32m                  [0;39m 类名方法: com.xuwen.wiki.controller.EbookController.list
+2021-08-18 19:41:48.059 INFO  com.xuwen.wiki.aspect.LogAspect                   :56   [32m                  [0;39m 远程地址: 127.0.0.1
+2021-08-18 19:41:48.060 INFO  com.xuwen.wiki.aspect.LogAspect                   :78   [32m                  [0;39m 请求参数: [{"page":0,"size":0}]
+2021-08-18 19:41:48.148 DEBUG c.x.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM ebook
+2021-08-18 19:41:48.149 DEBUG c.x.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m ==> Parameters: 
+2021-08-18 19:41:48.157 TRACE c.x.wiki.mapper.EbookMapper.selectByExample_COUNT :143  [32m                  [0;39m <==    Columns: count(0)
+2021-08-18 19:41:48.157 TRACE c.x.wiki.mapper.EbookMapper.selectByExample_COUNT :143  [32m                  [0;39m <==        Row: 5
+2021-08-18 19:41:48.157 DEBUG c.x.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m <==      Total: 1
+2021-08-18 19:41:48.158 DEBUG com.xuwen.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m ==>  Preparing: select id, `name`, category1_id, category2_id, description, cover, doc_count, view_count, vote_count from ebook
+2021-08-18 19:41:48.159 DEBUG com.xuwen.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m ==> Parameters: 
+2021-08-18 19:41:48.167 TRACE com.xuwen.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==    Columns: id, name, category1_id, category2_id, description, cover, doc_count, view_count, vote_count
+2021-08-18 19:41:48.168 TRACE com.xuwen.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 1, Spring Boot 入门教程, null, null, 零基础入门 Java 开发，企业级应用开发最佳首选框架, /image/cover2.png, 0, 0, 0
+2021-08-18 19:41:48.169 TRACE com.xuwen.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 2, Vue 入门教程, null, null, 零基础入门 Vue 开发，企业级应用开发最佳首选框架, /image/cover2.png, 0, 0, 0
+2021-08-18 19:41:48.170 TRACE com.xuwen.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 3, Python 入门教程, null, null, 零基础入门 Python 开发，企业级应用开发最佳首选框架, null, 0, 0, 0
+2021-08-18 19:41:48.170 TRACE com.xuwen.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 4, Mysql 入门教程, null, null, 零基础入门 Mysql 开发，企业级应用开发最佳首选框架, null, 0, 0, 0
+2021-08-18 19:41:48.171 TRACE com.xuwen.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 5, Oracle 入门教程, null, null, 零基础入门 Oracle 开发，企业级应用开发最佳首选框架, null, 0, 0, 0
+2021-08-18 19:41:48.171 DEBUG com.xuwen.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m <==      Total: 5
+2021-08-18 19:41:48.173 INFO  com.xuwen.wiki.service.EbookService               :43   [32m                  [0;39m 总行数：5
+2021-08-18 19:41:48.173 INFO  com.xuwen.wiki.service.EbookService               :44   [32m                  [0;39m 总页数：0
+2021-08-18 19:41:48.174 INFO  com.xuwen.wiki.aspect.LogAspect                   :90   [32m                  [0;39m 返回结果: {"content":{"list":[{"cover":"/image/cover2.png","description":"零基础入门 Java 开发，企业级应用开发最佳首选框架","docCount":0,"id":1,"name":"Spring Boot 入门教程","viewCount":0,"voteCount":0},{"cover":"/image/cover2.png","description":"零基础入门 Vue 开发，企业级应用开发最佳首选框架","docCount":0,"id":2,"name":"Vue 入门教程","viewCount":0,"voteCount":0},{"description":"零基础入门 Python 开发，企业级应用开发最佳首选框架","docCount":0,"id":3,"name":"Python 入门教程","viewCount":0,"voteCount":0},{"description":"零基础入门 Mysql 开发，企业级应用开发最佳首选框架","docCount":0,"id":4,"name":"Mysql 入门教程","viewCount":0,"voteCount":0},{"description":"零基础入门 Oracle 开发，企业级应用开发最佳首选框架","docCount":0,"id":5,"name":"Oracle 入门教程","viewCount":0,"voteCount":0}],"total":5},"success":true}
+2021-08-18 19:41:48.174 INFO  com.xuwen.wiki.aspect.LogAspect                   :91   [32m                  [0;39m ------------- 结束 耗时：116 ms -------------
+2021-08-18 19:42:08.244 INFO  com.xuwen.wiki.aspect.LogAspect                   :53   [32m                  [0;39m ------------- 开始 -------------
+2021-08-18 19:42:08.245 INFO  com.xuwen.wiki.aspect.LogAspect                   :54   [32m                  [0;39m 请求地址: http://127.0.0.1:8880/ebook/list GET
+2021-08-18 19:42:08.245 INFO  com.xuwen.wiki.aspect.LogAspect                   :55   [32m                  [0;39m 类名方法: com.xuwen.wiki.controller.EbookController.list
+2021-08-18 19:42:08.246 INFO  com.xuwen.wiki.aspect.LogAspect                   :56   [32m                  [0;39m 远程地址: 127.0.0.1
+2021-08-18 19:42:08.246 INFO  com.xuwen.wiki.aspect.LogAspect                   :78   [32m                  [0;39m 请求参数: [{"page":0,"size":0}]
+2021-08-18 19:42:08.254 DEBUG c.x.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m ==>  Preparing: SELECT count(0) FROM ebook
+2021-08-18 19:42:08.255 DEBUG c.x.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m ==> Parameters: 
+2021-08-18 19:42:08.262 TRACE c.x.wiki.mapper.EbookMapper.selectByExample_COUNT :143  [32m                  [0;39m <==    Columns: count(0)
+2021-08-18 19:42:08.263 TRACE c.x.wiki.mapper.EbookMapper.selectByExample_COUNT :143  [32m                  [0;39m <==        Row: 5
+2021-08-18 19:42:08.263 DEBUG c.x.wiki.mapper.EbookMapper.selectByExample_COUNT :137  [32m                  [0;39m <==      Total: 1
+2021-08-18 19:42:08.264 DEBUG com.xuwen.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m ==>  Preparing: select id, `name`, category1_id, category2_id, description, cover, doc_count, view_count, vote_count from ebook
+2021-08-18 19:42:08.264 DEBUG com.xuwen.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m ==> Parameters: 
+2021-08-18 19:42:08.271 TRACE com.xuwen.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==    Columns: id, name, category1_id, category2_id, description, cover, doc_count, view_count, vote_count
+2021-08-18 19:42:08.273 TRACE com.xuwen.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 1, Spring Boot 入门教程, null, null, 零基础入门 Java 开发，企业级应用开发最佳首选框架, /image/cover2.png, 0, 0, 0
+2021-08-18 19:42:08.276 TRACE com.xuwen.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 2, Vue 入门教程, null, null, 零基础入门 Vue 开发，企业级应用开发最佳首选框架, /image/cover2.png, 0, 0, 0
+2021-08-18 19:42:08.276 TRACE com.xuwen.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 3, Python 入门教程, null, null, 零基础入门 Python 开发，企业级应用开发最佳首选框架, null, 0, 0, 0
+2021-08-18 19:42:08.277 TRACE com.xuwen.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 4, Mysql 入门教程, null, null, 零基础入门 Mysql 开发，企业级应用开发最佳首选框架, null, 0, 0, 0
+2021-08-18 19:42:08.277 TRACE com.xuwen.wiki.mapper.EbookMapper.selectByExample :143  [32m                  [0;39m <==        Row: 5, Oracle 入门教程, null, null, 零基础入门 Oracle 开发，企业级应用开发最佳首选框架, null, 0, 0, 0
+2021-08-18 19:42:08.277 DEBUG com.xuwen.wiki.mapper.EbookMapper.selectByExample :137  [32m                  [0;39m <==      Total: 5
+2021-08-18 19:42:08.278 INFO  com.xuwen.wiki.service.EbookService               :43   [32m                  [0;39m 总行数：5
+2021-08-18 19:42:08.278 INFO  com.xuwen.wiki.service.EbookService               :44   [32m                  [0;39m 总页数：0
+2021-08-18 19:42:08.278 INFO  com.xuwen.wiki.aspect.LogAspect                   :90   [32m                  [0;39m 返回结果: {"content":{"list":[{"cover":"/image/cover2.png","description":"零基础入门 Java 开发，企业级应用开发最佳首选框架","docCount":0,"id":1,"name":"Spring Boot 入门教程","viewCount":0,"voteCount":0},{"cover":"/image/cover2.png","description":"零基础入门 Vue 开发，企业级应用开发最佳首选框架","docCount":0,"id":2,"name":"Vue 入门教程","viewCount":0,"voteCount":0},{"description":"零基础入门 Python 开发，企业级应用开发最佳首选框架","docCount":0,"id":3,"name":"Python 入门教程","viewCount":0,"voteCount":0},{"description":"零基础入门 Mysql 开发，企业级应用开发最佳首选框架","docCount":0,"id":4,"name":"Mysql 入门教程","viewCount":0,"voteCount":0},{"description":"零基础入门 Oracle 开发，企业级应用开发最佳首选框架","docCount":0,"id":5,"name":"Oracle 入门教程","viewCount":0,"voteCount":0}],"total":5},"success":true}
+2021-08-18 19:42:08.279 INFO  com.xuwen.wiki.aspect.LogAspect                   :91   [32m                  [0;39m ------------- 结束 耗时：35 ms -------------

@@ -4,6 +4,7 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.xuwen.req.EbookReq;
 import com.xuwen.resp.EbookResp;
+import com.xuwen.resp.PageResp;
 import com.xuwen.util.CopyUtil;
 import com.xuwen.wiki.domain.Ebook;
 import com.xuwen.wiki.domain.EbookExample;
@@ -27,7 +28,7 @@ public class EbookService {
     @Resource
     private EbookMapper ebookMapper;
 
-    public List<EbookResp> list(EbookReq req){
+    public PageResp<EbookResp> list(EbookReq req){
 
         //根据书名查找,字符串拼接
         EbookExample ebookExample = new EbookExample();
@@ -36,7 +37,7 @@ public class EbookService {
             criteria.andNameLike("%"+req.getName()+"%");
         }
         //导入分页插件pom，然后写,pagehelper就+limit而已
-        PageHelper.startPage(1,3);
+        PageHelper.startPage(req.getPage(),req.getSize());
         List<Ebook> ebooksList = ebookMapper.selectByExample(ebookExample);
         PageInfo<Ebook> pageInfo = new PageInfo<>(ebooksList);
         LOG.info("总行数：{}",pageInfo.getTotal());
@@ -54,7 +55,13 @@ public class EbookService {
 
         //列表复制
         List<EbookResp> list = CopyUtil.copyList(ebooksList, EbookResp.class);
-        return list;
+
+        PageResp<EbookResp> pageResp = new PageResp();
+        pageResp.setTotal(pageInfo.getTotal());
+        pageResp.setList(list);
+
+
+        return pageResp;
     }
 
 }

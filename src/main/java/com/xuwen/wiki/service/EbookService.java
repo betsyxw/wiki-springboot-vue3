@@ -7,6 +7,7 @@ import com.xuwen.wiki.domain.Ebook;
 import com.xuwen.wiki.domain.EbookExample;
 import com.xuwen.wiki.mapper.EbookMapper;
 import org.springframework.stereotype.Service;
+import org.springframework.util.ObjectUtils;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -24,7 +25,9 @@ public class EbookService {
         //根据书名查找,字符串拼接
         EbookExample ebookExample = new EbookExample();
         EbookExample.Criteria criteria = ebookExample.createCriteria();
-        criteria.andNameLike("%"+req.getName()+"%");
+        if(!ObjectUtils.isEmpty(req.getName())){
+            criteria.andNameLike("%"+req.getName()+"%");
+        }
         List<Ebook> ebooksList = ebookMapper.selectByExample(ebookExample);
 
 //        List<EbookResp> respList = new ArrayList<>();

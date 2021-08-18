@@ -75,23 +75,29 @@
                 },
                 {
                     title: '分类一',
-                    key: 'category1Id'
+                    key: 'category1Id',
+                    dataIndex: 'category1Id'
+                },
+                {
+                    title: '分类二',
+                    key: 'category2Id',
+                    dataIndex: 'category2Id'
                 },
                 {
                     title: '文档数',
-                    key: 'docCount'
+                    dataIndex: 'docCount'
                 },
                 {
                     title: '阅读数',
-                    key: 'viewCount'
+                    dataIndex: 'viewCount'
                 },
                 {
                     title: '点赞数',
-                    key: 'voteCount'
+                    dataIndex: 'voteCount'
                 },
                 {
                     title: '操作',
-                    key: 'aciton',
+                    key: 'action',
                     slots:{customRender: 'action'}
                 }
             ];

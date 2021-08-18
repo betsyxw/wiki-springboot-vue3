@@ -1,13 +1,12 @@
 package com.xuwen.wiki.controller;
 
-import com.xuwen.req.EbookReq;
+import com.xuwen.req.EbookQueryReq;
+import com.xuwen.req.EbookSaveReq;
 import com.xuwen.resp.CommonResp;
-import com.xuwen.resp.EbookResp;
+import com.xuwen.resp.EbookQueryResp;
 import com.xuwen.resp.PageResp;
 import com.xuwen.wiki.service.EbookService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 
@@ -32,11 +31,26 @@ public class EbookController {
 //        return resp;
 //    }
 
+    //查询全部数据
     @GetMapping("/list")
-    public CommonResp list(EbookReq req){
-        CommonResp<PageResp<EbookResp>> resp = new CommonResp<>();
-        PageResp<EbookResp> list = ebookService.list(req);
+    public CommonResp list(EbookQueryReq req){
+        CommonResp<PageResp<EbookQueryResp>> resp = new CommonResp<>();
+        PageResp<EbookQueryResp> list = ebookService.list(req);
         resp.setContent(list);
         return resp;
     }
+
+    //编辑,保存
+    @PostMapping("/save")
+    public CommonResp save(@RequestBody EbookSaveReq req){
+        CommonResp resp = new CommonResp<>();
+        ebookService.save(req);
+        return resp;
+    }
+
+
+
+
+
+
 }

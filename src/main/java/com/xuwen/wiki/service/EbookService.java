@@ -2,8 +2,9 @@ package com.xuwen.wiki.service;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.xuwen.req.EbookReq;
-import com.xuwen.resp.EbookResp;
+import com.xuwen.req.EbookQueryReq;
+import com.xuwen.req.EbookSaveReq;
+import com.xuwen.resp.EbookQueryResp;
 import com.xuwen.resp.PageResp;
 import com.xuwen.util.CopyUtil;
 import com.xuwen.wiki.domain.Ebook;
@@ -28,7 +29,7 @@ public class EbookService {
     @Resource
     private EbookMapper ebookMapper;
 
-    public PageResp<EbookResp> list(EbookReq req){
+    public PageResp<EbookQueryResp> list(EbookQueryReq req){
 
         //根据书名查找,字符串拼接
         EbookExample ebookExample = new EbookExample();
@@ -54,14 +55,28 @@ public class EbookService {
 //        }
 
         //列表复制
-        List<EbookResp> list = CopyUtil.copyList(ebooksList, EbookResp.class);
+        List<EbookQueryResp> list = CopyUtil.copyList(ebooksList, EbookQueryResp.class);
 
-        PageResp<EbookResp> pageResp = new PageResp();
+        PageResp<EbookQueryResp> pageResp = new PageResp();
         pageResp.setTotal(pageInfo.getTotal());
         pageResp.setList(list);
 
 
         return pageResp;
+    }
+
+    //save,保存(编辑保存)
+    public void save(EbookSaveReq req){
+        Ebook ebook = CopyUtil.copy(req,Ebook.class);
+        if(ObjectUtils.isEmpty(req.getId())){
+            //id=空，就是新增
+            ebookMapper.insert(ebook);
+        }else{
+            //存在id，更新+编辑
+            ebookMapper.updateByPrimaryKey(ebook);
+        }
+
+
     }
 
 }

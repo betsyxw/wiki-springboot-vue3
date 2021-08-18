@@ -74,7 +74,11 @@
              * **/
             const handleQuery = (params: any)=>{
                 loading.value = true;
-                axios.get("/ebook/list",params).then((response)=>{
+                axios.get("/ebook/list",{
+                    params:{
+                        page:params.page,
+                        size: params.size}
+                }).then((response)=>{
                     loading.value = false;
                     const data = response.data;
                     ebooks.value = data.content.list;

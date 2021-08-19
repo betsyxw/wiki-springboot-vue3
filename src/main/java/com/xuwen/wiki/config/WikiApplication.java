@@ -10,7 +10,7 @@ import org.springframework.core.env.ConfigurableEnvironment;
 
 
 @MapperScan("com.xuwen.wiki.mapper")
-@ComponentScan("com.xuwen.wiki")
+@ComponentScan("com.xuwen")
 @SpringBootApplication
 public class WikiApplication {
     

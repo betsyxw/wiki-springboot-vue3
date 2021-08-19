@@ -4,7 +4,9 @@
               :style="{ background: '#fff', padding: '24px', margin: 0, minHeight: '280px' }"
       >
         <div class="about">
-<!--          <h1>电子书后台管理</h1>-->
+            <p>
+                <a-button type="primary" @click="add()" size="large">新增</a-button>
+            </p>
             <a-table :columns="columns" :row-key="record=> record.id"
                      :data-source="ebooks" :pagination="pagination"
                      :loading="loading" @change="handleTableChange">
@@ -161,6 +163,14 @@
                 modalVisible.value = true;
                 ebook.value = record;
             };
+
+            /**
+             * 新增
+             * **/
+            const add = ()=>{
+                modalVisible.value = true;
+                ebook.value = {};
+            };
             /**
              * 删除
              * **/
@@ -174,6 +184,10 @@
                     size: pagination.value.pageSize
                 });
             });
+
+
+
+            //返回数据去页面
             return{
                 ebooks,
                 pagination,
@@ -182,6 +196,7 @@
                 handleTableChange,
                 edit,
                 del,
+                add,
                 modalVisible,
                 modalLoading,
                 handleModalOk,

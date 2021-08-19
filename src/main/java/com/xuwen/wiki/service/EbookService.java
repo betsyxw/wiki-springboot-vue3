@@ -7,6 +7,7 @@ import com.xuwen.req.EbookSaveReq;
 import com.xuwen.resp.EbookQueryResp;
 import com.xuwen.resp.PageResp;
 import com.xuwen.util.CopyUtil;
+import com.xuwen.util.SnowFlake;
 import com.xuwen.wiki.domain.Ebook;
 import com.xuwen.wiki.domain.EbookExample;
 import com.xuwen.wiki.mapper.EbookMapper;
@@ -26,8 +27,12 @@ import java.util.List;
 public class EbookService {
     private static final Logger LOG = LoggerFactory.getLogger(EbookService.class);
 
+
     @Resource
     private EbookMapper ebookMapper;
+
+    @Resource
+    private SnowFlake snowFlake;
 
     public PageResp<EbookQueryResp> list(EbookQueryReq req){
 
@@ -70,7 +75,10 @@ public class EbookService {
         Ebook ebook = CopyUtil.copy(req,Ebook.class);
         if(ObjectUtils.isEmpty(req.getId())){
             //id=空，就是新增
-            ebookMapper.insert(ebook);
+            ebook.setId(snowFlake.nextId());
+//            ebookMapper.insert(ebook);
+            //insertSelective比insert好用，允许null
+            ebookMapper.insertSelective(ebook);
         }else{
             //存在id，更新+编辑
             ebookMapper.updateByPrimaryKey(ebook);

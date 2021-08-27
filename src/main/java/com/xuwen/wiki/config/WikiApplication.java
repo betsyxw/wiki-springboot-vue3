@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.core.env.ConfigurableEnvironment;
 
-
+//由于包的放置地方出现问题，所以扩大了componentScan的扫描范围
 @MapperScan("com.xuwen.wiki.mapper")
 @ComponentScan("com.xuwen")
 @SpringBootApplication

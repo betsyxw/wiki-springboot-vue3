@@ -16,7 +16,14 @@
                 <template v-slot:action="{text,record}">
                     <a-space size="small">
                         <a-button type="primary" @click="edit(record)">编辑</a-button>
-                        <a-button type="danger" @click="del">删除</a-button>
+                        <a-popconfirm
+                                title="删除后不可恢复，确认删除？"
+                                ok-text="是"
+                                cancel-text="否"
+                                @confirm="handleDelete(record.id)"
+                        >
+                            <a-button type="danger" >删除</a-button>
+                        </a-popconfirm>
                     </a-space>
                 </template>
             </a-table>
@@ -44,7 +51,7 @@
                 <a-input v-model:value="ebook.category2Id" />
             </a-form-item>
             <a-form-item label="描述">
-                <a-input v-model:value="ebook.desc" />
+                <a-input v-model:value="ebook.description" />
             </a-form-item>
         </a-form>
     </a-modal>
@@ -174,9 +181,18 @@
             /**
              * 删除
              * **/
-            const del = ()=>{
-                modalVisible.value = true;
-            }
+            const handleDelete = (id: number)=>{
+                axios.delete("/ebook/delete"+id).then((response)=>{
+                    const data = response.data;//data=commonResp
+                    if(data.success){
+                        //重新加载数据list
+                        handleQuery({
+                            page: pagination.value.current,
+                            size: pagination.value.pageSize
+                        });
+                    }
+                });
+            };
 
             onMounted(()=>{
                 handleQuery({
@@ -194,9 +210,11 @@
                 columns,
                 loading,
                 handleTableChange,
+
                 edit,
-                del,
+                handleDelete,
                 add,
+
                 modalVisible,
                 modalLoading,
                 handleModalOk,

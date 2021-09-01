@@ -1,6 +1,7 @@
 package com.xuwen.wiki.domain;
 
 public class Ebook {
+
     private Long id;
 
     private String name;

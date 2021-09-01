@@ -1,6 +1,7 @@
 package com.xuwen.resp;
 
 public class EbookQueryResp {
+
     private Long id;
 
     private String name;

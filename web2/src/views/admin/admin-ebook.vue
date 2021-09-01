@@ -70,7 +70,7 @@
             const ebooks = ref();
             const pagination = ref({
                 current: 1,
-                pageSize: 4,
+                pageSize: 8,
                 total: 0
             });
             const loading = ref(false);
@@ -154,14 +154,16 @@
                 modalLoading.value = true;
                 axios.post("/ebook/save",ebook.value).then((response)=>{
                     const data = response.data;
+                    modalLoading.value = false;
                     if(data.success){
                         modalVisible.value = false;
-                        modalLoading.value = false;
                         //重新加载数据list
                         handleQuery({
                             page: pagination.value.current,
                             size: pagination.value.pageSize
                         });
+                    }else{
+                        message.error(data.message);
                     }
                 });
             };

@@ -5,7 +5,8 @@
       >
         <div class="about">
             <p>
-                <a-button type="primary" @click="add()" >新增</a-button>
+                        <a-button type="primary" @click="add()" >新增</a-button>
+
             </p>
             <a-table :columns="columns" :row-key="record=> record.id"
                      :data-source="ebooks" :pagination="pagination"
@@ -63,7 +64,6 @@
     import axios from "axios";
     import { defineComponent ,onMounted, ref} from 'vue';
     import {message} from 'ant-design-vue'
-    import {Tool} from '@/util/tool'
 
     export default defineComponent({
         name:'AdminEbook',
@@ -178,7 +178,7 @@
              * **/
             const edit = (record: any)=>{
                 modalVisible.value = true;
-                ebook.value = Tool.copy(record);
+                ebook.value = record;
             };
 
             /**

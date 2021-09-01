@@ -8,8 +8,8 @@
                 <a-button type="primary" @click="add()" >新增</a-button>
             </p>
             <a-table :columns="columns" :row-key="record=> record.id"
-                     :data-source="categorys" :pagination="pagination"
-                     :loading="loading" @change="handleTableChange">
+                     :data-source="categorys"
+                     :loading="loading" :pagination="false">
                 <template #cover="{ text:cover }">
                     <img v-if="cover" :src="cover" alt="avatar">
                 </template>
@@ -65,11 +65,6 @@
             const param = ref();
             param.value={};
             const categorys = ref();
-            const pagination = ref({
-                current: 1,
-                pageSize: 8,
-                total: 0
-            });
             const loading = ref(false);
             const columns = [
                 {
@@ -94,36 +89,19 @@
             /**
              * 数据查询
              * **/
-            const handleQuery = (params: any)=>{
+            const handleQuery = ()=>{
                 loading.value = true;
-                axios.get("/category/list",{
-                    params:{
-                        page:params.page,
-                        size: params.size
-                    }
-                }).then((response)=>{
+                axios.get("/category/all").then((response)=>{
                     loading.value = false;
                     const data = response.data;
                     if(data.success) {
-                        categorys.value = data.content.list;
-                        //重置分页
-                        pagination.value.current = params.page;
-                        pagination.value.total = data.content.total;
+                        categorys.value = data.content;
                     }else{
                         message.error(data.message);
                     }
                 });
             };
-            /**
-             * 表格点击
-             * **/
-            const handleTableChange = (pagination: any)=>{
-                console.log("查看分页参数"+pagination);
-                handleQuery({
-                   page: pagination.current,
-                   size: pagination.pageSize
-                });
-            };
+
 
             /**
              * 表单
@@ -139,10 +117,7 @@
                     if(data.success){
                         modalVisible.value = false;
                         //重新加载数据list
-                        handleQuery({
-                            page: pagination.value.current,
-                            size: pagination.value.pageSize
-                        });
+                        handleQuery();
                     }else{
                         message.error(data.message);
                     }
@@ -173,19 +148,13 @@
                     const data = response.data;//data=commonResp
                     if(data.success){
                         //重新加载数据list
-                        handleQuery({
-                            page: pagination.value.current,
-                            size: pagination.value.pageSize
-                        });
+                        handleQuery();
                     }
                 });
             };
 
             onMounted(()=>{
-                handleQuery({
-                    page: 1,
-                    size: pagination.value.pageSize
-                });
+                handleQuery();
             });
 
 
@@ -193,10 +162,8 @@
             //返回数据去页面
             return{
                 categorys,
-                pagination,
                 columns,
                 loading,
-                handleTableChange,
                 handleQuery,
 
                 edit,

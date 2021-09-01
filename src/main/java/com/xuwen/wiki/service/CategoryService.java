@@ -34,10 +34,28 @@ public class CategoryService {
     @Resource
     private SnowFlake snowFlake;
 
+    //查询全部
+    public List<CategoryQueryResp> all(){
+
+        //根据书名查找,字符串拼接
+        CategoryExample categoryExample = new CategoryExample();
+        categoryExample.setOrderByClause("sort asc");
+        //导入分页插件pom，然后写,pagehelper就+limit而已
+        List<Category> categorysList = categoryMapper.selectByExample(categoryExample);
+
+
+        //列表复制
+        List<CategoryQueryResp> list = CopyUtil.copyList(categorysList, CategoryQueryResp.class);
+
+        return list;
+    }
+
+    //查询
     public PageResp<CategoryQueryResp> list(CategoryQueryReq req){
 
         //根据书名查找,字符串拼接
         CategoryExample categoryExample = new CategoryExample();
+        categoryExample.setOrderByClause("sort asc");
         CategoryExample.Criteria criteria = categoryExample.createCriteria();
 
         //导入分页插件pom，然后写,pagehelper就+limit而已
@@ -67,6 +85,7 @@ public class CategoryService {
 
         return pageResp;
     }
+
 
     //save,保存(编辑保存)
     public void save(CategorySaveReq req){

@@ -22,6 +22,11 @@ public class CommonResp<T> {
         return success;
     }
 
+    public void setSuccess(boolean success) {
+        this.success = success;
+    }
+
+
     public void getSuccess(boolean success){
         this.success = success;
     }
